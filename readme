@@ -1,1 +1,4 @@
 pip3 install scrapy
+pip3 install selenium
+Download chromedriver from https://chromedriver.chromium.org/downloads
+determine what version of Google Chrome from http://www.whatismybrowser.com
