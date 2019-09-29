@@ -1,0 +1,9 @@
+Download java8
+Configuring environment variables
+source ~/.bashrc
+Check java --version: java -version
+Download neo4j
+Install neo4j
+neo4j >> project >> add graph >> create a local graph >> password
+Start 
+thats all
