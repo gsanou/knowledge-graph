@@ -26,7 +26,7 @@ class BaiduBaike():
         if polysemantics:
             info_list += polysemantics
         infos = [info for info in info_list if len(info) > 2]
-        print(infos)
+        # print(infos)
         return infos
 
     def extract_baidu(self, selector):
@@ -63,26 +63,26 @@ class BaiduBaike():
         return info_list
 
 
-baidu = BaiduBaike()
-while(1):
-    word = input('enter an word:')
-    contentss = baidu.info_extract_baidu(word)
-    root_node = Node("Root_"+word, name=word)
-    count_root = 1
-    l = locals()
-    for contents in contentss:
-        print("contents:")
-        print(contents)
-        print(type(contents))
-        for content in contents:
-
-            # create node
-            l['test_node_' + str(count_root)] = Node(word, name=contents[content])
-            graph.create(l['test_node_' + str(count_root)])
-
-            # create relationship
-            l['node_' + str(count_root) + "_root_node"] = Relationship(root_node, content, l['test_node_' + str(count_root)])
-            graph.create(l['node_' + str(count_root) + "_root_node"])
+# baidu = BaiduBaike()
+# while(1):
+#     word = input('enter an word:')
+#     contentss = baidu.info_extract_baidu(word)
+#     root_node = Node("Root_"+word, name=word)
+#     count_root = 1
+#     l = locals()
+#     for contents in contentss:
+#         # print("contents:")
+#         # print(contents)
+#         # print(type(contents))
+#         for content in contents:
+#
+#             # create node
+#             l['test_node_' + str(count_root)] = Node(word, name=contents[content])
+#             graph.create(l['test_node_' + str(count_root)])
+#
+#             # create relationship
+#             l['node_' + str(count_root) + "_root_node"] = Relationship(root_node, content, l['test_node_' + str(count_root)])
+#             graph.create(l['node_' + str(count_root) + "_root_node"])
 
 
 # [{'current_semantic': '钱钟书同名作品', 'tags': ['文学作品', '字词', '书籍', '中国文学'], '中文名': '吃饭', '作者': '钱钟书', '字': '默存', '号': '槐聚'},
