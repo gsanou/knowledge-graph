@@ -4,10 +4,10 @@ import codecs
 from urllib import parse
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-
-from py2neo import Graph, Node, Relationship
-graph = Graph('http://localhost:7474', username='neo4j', password='0905')
-graph.delete_all()
+# from py2neo import Graph, Node, Relationship
+#
+# graph = Graph('http://localhost:7474', username='neo4j', password='0905')
+# graph.delete_all()
 
 class BaiduBaike():
     def __init__(self):
@@ -31,14 +31,14 @@ class BaiduBaike():
 
     def extract_baidu(self, selector):
         info_data = {}
-        # if selector.xpath('//h2/text()'):
-        #     info_data['current_semantic'] = selector.xpath('//h2/text()')[0].replace('    ', '').replace('（','').replace('）','')
-        # else:
-        #     info_data['current_semantic'] = ''
-        # if info_data['current_semantic'] == '目录':
-        #     info_data['current_semantic'] = ''
+        if selector.xpath('//h2/text()'):
+            info_data['current_semantic'] = selector.xpath('//h2/text()')[0].replace('    ', '').replace('（','').replace('）','')
+        else:
+            info_data['current_semantic'] = ''
+        if info_data['current_semantic'] == '目录':
+            info_data['current_semantic'] = ''
 
-        # info_data['tags'] = [item.replace('\n', '') for item in selector.xpath('//span[@class="taglist"]/text()')]
+        info_data['tags'] = [item.replace('\n', '') for item in selector.xpath('//span[@class="taglist"]/text()')]
         if selector.xpath("//div[starts-with(@class,'basic-info')]"):
             for li_result in selector.xpath("//div[starts-with(@class,'basic-info')]")[0].xpath('./dl'):
                 attributes = [attribute.xpath('string(.)').replace('\n', '') for attribute in li_result.xpath('./dt')]
@@ -56,7 +56,7 @@ class BaiduBaike():
             for item in zip(names, semantics):
                 selector = etree.HTML(self.get_html(item[1]))
                 info_data = self.extract_baidu(selector)
-                # info_data['current_semantic'] = item[0].replace('    ', '').replace('（','').replace('）','')
+                info_data['current_semantic'] = item[0].replace('    ', '').replace('（','').replace('）','')
                 if info_data:
                     info_list.append(info_data)
         # print(info_list)

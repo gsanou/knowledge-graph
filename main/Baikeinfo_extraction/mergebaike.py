@@ -1,27 +1,39 @@
 from baidubaike import *
 import jieba
+from py2neo import Graph, Node, Relationship
+
+graph = Graph('http://localhost:7474', username='neo4j', password='0905')
+graph.delete_all()
 
 def collect_infos(word):
-    print("collect infos")
     baidu = BaiduBaike()
+    # + ownthink api 输出
+    # + 开源库的输出
+    # + 最后都添加到merge_infos里面
     merge_infos = list()
     baidu_infos = baidu.info_extract_baidu(word)
-    print("baidu info s")
-    print(baidu_infos)
     merge_infos += baidu_infos
-
+    print("merge infos:")
+    print(merge_infos)
     return merge_infos
 
 def merge_infos_semantic(infos):
     sems_all = [item['current_semantic'] for item in infos]
+    print("sems_all")
+    print(sems_all)
     '''merge infos by semantics'''
     update_infos = list()
     for sem in set(sems_all):
+        print("sem:")
+        print(sem)
         sems_dict = {}
         for item in infos:
             if item['current_semantic'] == sem:
                 sems_dict.update(item)
         update_infos.append(sems_dict)
+    print("update")
+    print(type(update_infos))
+    print(update_infos)
     return update_infos
 
 def rank_infos(infos):
@@ -75,10 +87,27 @@ def merge_infos(word):
 
     return ranked_infos
 
+def storage_neo4j(knowledgess):
+    for knowledges in knowledgess:
+        for knowledge in knowledges:
+
+            # create node
+            node = Node(word,name = knowledges[knowledge])
+            graph.create(node)
+
+            # create relationship
+            rela = Relationship(root_node, knowledge, node)
+            graph.create(rela)
 
 while(1):
     word = input('enter an word to search:\n')
+    root_node = Node("Root_" + word, name=word)
+    print("infos .....")
     infos = collect_infos(word)
+    print("update_infos")
     update_infos = merge_infos_semantic(infos)
-    ranked_infos, covered_index = rank_infos(update_infos)
-    merge_infos_sim(ranked_infos, covered_index)
+    storage_neo4j(update_infos)
+    # print("ranked_infos")
+    # ranked_infos, covered_index = rank_infos(update_infos)
+    # print("merge_infos_sim .....")
+    # merge_infos_sim(ranked_infos, covered_index)
