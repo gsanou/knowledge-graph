@@ -3,8 +3,8 @@ import re
 import jieba
 from py2neo import Graph, Node, Relationship
 
-graph = Graph('http://localhost:7474', username='neo4j', password='0905')
-graph.delete_all()
+# graph = Graph('http://localhost:7474', username='neo4j', password='0905')
+# graph.delete_all()
 # reg = "[^0-9A-Za-z\u4e00-\u9fa5]"  ####### remove symbol rule
 # level=1
 
@@ -63,10 +63,10 @@ def web_kg(entity):
             # l['node_' + str(count_root) +"_root_node"] = Relationship(root_node, node.get("rela"), l['test_node_' + str(count_root)])
             # graph.create(l['node_' + str(count_root) +"_root_node"])
             #
-            # node = str(node)
-            # node = node.replace("'type'", 'type').replace("'source'", 'source').replace("'target'", 'target')
-            # print(node + ',')
+            node = str(node)
+            node = node.replace("'type'", 'type').replace("'source'", 'source').replace("'target'", 'target')
+            print(node + ',')
             # count_root += 1
 
-if __name__ == '__main__':
-    web_kg('水果')
+# if __name__ == '__main__':
+#     web_kg('水果')

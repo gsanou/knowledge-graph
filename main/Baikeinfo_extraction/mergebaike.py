@@ -3,7 +3,7 @@ import jieba
 from py2neo import Graph, Node, Relationship
 
 graph = Graph('http://localhost:7474', username='neo4j', password='0905')
-graph.delete_all()
+# graph.delete_all()
 
 def collect_infos(word):
     baidu = BaiduBaike()
