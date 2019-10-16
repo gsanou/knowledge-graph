@@ -55,5 +55,7 @@ rmatcher = RelationshipMatcher(graph)
 # # # neighbors = neo4j_client.driver.session().write_transaction(neo4j_client.get_neighbors_relations,'Graph', '吃饭')
 # command = 'start n=node(%d) return n' % id
 # Graph.run(command)
-from exmaple1_webbase_kg import *
-web_kg('水果')
+from ownthink import *
+sizhi = OwnThink()
+
+sizhi.web_kg('吃饭')

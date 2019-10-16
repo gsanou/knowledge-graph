@@ -26,13 +26,13 @@ class BaiduBaike():
         if polysemantics:
             info_list += polysemantics
         infos = [info for info in info_list if len(info) > 2]
-        # print(infos)
+        print(infos)
         return infos
 
     def extract_baidu(self, selector):
         info_data = {}
         if selector.xpath('//h2/text()'):
-            info_data['current_semantic'] = selector.xpath('//h2/text()')[0].replace('    ', '').replace('（','').replace('）','')
+            info_data['current_semantic'] = selector.xpath('//h2/text()')[0].replace('    ', '').replace('（','').replace('）','')
         else:
             info_data['current_semantic'] = ''
         if info_data['current_semantic'] == '目录':
@@ -44,7 +44,7 @@ class BaiduBaike():
                 attributes = [attribute.xpath('string(.)').replace('\n', '') for attribute in li_result.xpath('./dt')]
                 values = [value.xpath('string(.)').replace('\n', '') for value in li_result.xpath('./dd')]
                 for item in zip(attributes, values):
-                    info_data[item[0].replace('    ', '')] = item[1].replace('    ', '')
+                    info_data[item[0].replace('    ', '')] = item[1].replace('    ', '')
         return info_data
 
     def checkbaidu_polysemantic(self, selector):
@@ -56,17 +56,17 @@ class BaiduBaike():
             for item in zip(names, semantics):
                 selector = etree.HTML(self.get_html(item[1]))
                 info_data = self.extract_baidu(selector)
-                info_data['current_semantic'] = item[0].replace('    ', '').replace('（','').replace('）','')
+                info_data['current_semantic'] = item[0].replace('    ', '').replace('（','').replace('）','')
                 if info_data:
                     info_list.append(info_data)
         # print(info_list)
         return info_list
 
 
-# baidu = BaiduBaike()
-# while(1):
-#     word = input('enter an word:')
-#     contentss = baidu.info_extract_baidu(word)
+baidu = BaiduBaike()
+while(1):
+    word = input('enter an word:')
+    contentss = baidu.info_extract_baidu(word)
 #     root_node = Node("Root_"+word, name=word)
 #     count_root = 1
 #     l = locals()
@@ -83,7 +83,3 @@ class BaiduBaike():
 #             # create relationship
 #             l['node_' + str(count_root) + "_root_node"] = Relationship(root_node, content, l['test_node_' + str(count_root)])
 #             graph.create(l['node_' + str(count_root) + "_root_node"])
-
-
-# [{'current_semantic': '钱钟书同名作品', 'tags': ['文学作品', '字词', '书籍', '中国文学'], '中文名': '吃饭', '作者': '钱钟书', '字': '默存', '号': '槐聚'},
-#  {'current_semantic': '章小东著图书', 'tags': ['出版物', '书籍'], '书名': '吃饭', '作者': '章小东', 'ISBN': '978-7-208-11349-7/1·1122', '页数': '156页', '定价': '32.00元', '出版社': '上海人民出版社', '出版时间': '2013年8月', '插页': '2', '字数': '225.000'}]

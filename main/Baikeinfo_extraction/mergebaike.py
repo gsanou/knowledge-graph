@@ -1,7 +1,7 @@
 from baidubaike import *
 import jieba
 from py2neo import Graph, Node, Relationship
-
+from ownthink import *
 graph = Graph('http://localhost:7474', username='neo4j', password='0905')
 # graph.delete_all()
 
