@@ -6,7 +6,7 @@ graph = Graph('http://localhost:7474', username='neo4j', password='0905')
 # graph.delete_all()
 
 def collect_infos(word):
-    baidu = BaiduBaike()
+    baidu = BaiduBaike() #百度百科输出
     # + ownthink api 输出
     # + 开源库的输出
     # + 最后都添加到merge_infos里面

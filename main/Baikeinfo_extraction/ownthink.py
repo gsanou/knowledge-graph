@@ -1,6 +1,4 @@
 import requests
-import re
-import jieba
 from py2neo import Graph, Node, Relationship
 
 # graph = Graph('http://localhost:7474', username='neo4j', password='0905')
@@ -72,21 +70,6 @@ class OwnThink():
                 # count_root += 1
 
 if __name__ == '__main__':
-    web_kg('吃饭')
+    ownthink = OwnThink()
+    ownthink.web_kg('吃饭')
 
-#  百度百科：
-# [{'current_semantic': '词语释义', 'tags': ['字词'], '中文名': '吃饭', '拼音': 'chī  fàn', '粤语发音': 'hek3 faan6', '韩语翻译': '먹다', '日文翻译': '食べる', '英语翻译': 'have a meal', '德语翻译': 'essen', '法语翻译': 'manger', '拉丁语翻译': 'Comede', '意大利语翻译': 'mangiare'},
-#  {'current_semantic': '章小东著图书', 'tags': ['出版物', '书籍'], '书名': '吃饭', '作者': '章小东', 'ISBN': '978-7-208-11349-7/1·1122', '页数': '156页', '定价': '32.00元', '出版社': '上海人民出版社', '出版时间': '2013年8月', '插页': '2', '字数': '225.000'}]
-# {'current_semantic': '钱钟书同名作品', 'tags': ['文学作品', '字词', '书籍', '中国文学'], '中文名': '吃饭', '作者': '钱钟书', '字': '默存', '号': '槐聚'},
-
-# ownthink:
-# [{'source': '吃饭[词语释义]', 'target': '吃饭', 'type': 'resolved', 'rela': '中文名'},
-#  {'source': '吃饭[词语释义]', 'target': 'chīfàn', 'type': 'resolved', 'rela': '拼音'},
-#  {'source': '吃饭[词语释义]', 'target': 'hek3faan6', 'type': 'resolved', 'rela': '粤语发音'},
-#  {'source': '吃饭[词语释义]', 'target': '먹다', 'type': 'resolved', 'rela': '韩语翻译'},
-#  {'source': '吃饭[词语释义]', 'target': '食べる', 'type': 'resolved', 'rela': '日文翻译'},
-#  {'source': '吃饭[词语释义]', 'target': 'haveameal', 'type': 'resolved', 'rela': '英语翻译'},
-#  {'source': '吃饭[词语释义]', 'target': 'essen', 'type': 'resolved', 'rela': '德语翻译'},
-#  {'source': '吃饭[词语释义]', 'target': 'manger', 'type': 'resolved', 'rela': '法语翻译'},
-#  {'source': '吃饭[词语释义]', 'target': 'Comede', 'type': 'resolved', 'rela': '拉丁语翻译'},
-#  {'source': '吃饭[词语释义]', 'target': 'mangiare', 'type': 'resolved', 'rela': '意大利语翻译'}]

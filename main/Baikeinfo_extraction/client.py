@@ -46,16 +46,22 @@ rmatcher = RelationshipMatcher(graph)
 # example3:
 # 知道id
 # 查询相邻的关系
-# start n=node(886) return n
+
 ########################################
 
-# from test_neo4j import *
-# id = 868
-# # neo4j_client = Neo4j_client()
-# # # neighbors = neo4j_client.driver.session().write_transaction(neo4j_client.get_neighbors_relations,'Graph', '吃饭')
-# command = 'start n=node(%d) return n' % id
-# Graph.run(command)
-from ownthink import *
-sizhi = OwnThink()
+# a = matcher.get(868)
+# print(a)
+#
+# b = list(rmatcher.match({a}))
+# print(b)
 
-sizhi.web_kg('吃饭')
+########################################
+# example4:
+# 知道两个点的ID
+# 查询两个点之间的关系
+########################################
+# 886 和 887 是node 的id地址
+# nodeA_ID = matcher.get(886)
+# nodeB_ID = matcher.get(887)
+# find_relationship = graph.match_one({nodeA_ID,nodeB_ID})
+# print(find_relationship)
