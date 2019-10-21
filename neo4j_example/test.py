@@ -4,7 +4,7 @@ import jieba
 from py2neo import Graph, Node, Relationship
 
 g = Graph('http://localhost:7474', username='neo4j', password='0905')
-g.delete_all()
+# g.delete_all()
 # tx = graph.begin()
 # a = Node("person", name = "AAA")
 # tx.create(a)

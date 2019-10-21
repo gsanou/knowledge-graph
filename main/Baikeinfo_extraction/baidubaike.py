@@ -4,10 +4,10 @@ import codecs
 from urllib import parse
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-# from py2neo import Graph, Node, Relationship
-#
-# graph = Graph('http://localhost:7474', username='neo4j', password='0905')
-# graph.delete_all()
+from py2neo import Graph, Node, Relationship
+
+graph = Graph('http://localhost:7474', username='neo4j', password='0905')
+graph.delete_all()
 
 class BaiduBaike():
     def __init__(self):
