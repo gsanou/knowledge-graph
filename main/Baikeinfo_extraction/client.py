@@ -14,22 +14,22 @@ rmatcher = RelationshipMatcher(graph)
 # 可以查询节点id
 ########################################
 
-a = matcher.match("Root_吃饭", name="吃饭").first()   #a Node
-b = matcher.match("吃饭", name="manger").first()
-r1 = rmatcher.match({a,b}).first()   # a Relationship
-print("r1（a和b的关系）:")
-print(r1)
-print("\n")
-
-c = matcher.match("吃饭", name="吃饭").first()
-r2 = rmatcher.match({a,c}).first()
-print("r2（a和c的关系）:")
-print(r2)
-print("\n")
-
-print("c节点的id")
-print(c)
-print("\n")
+# a = matcher.match("Root_吃饭", name="吃饭").first()   #a Node
+# b = matcher.match("吃饭", name="manger").first()
+# r1 = rmatcher.match({a,b}).first()   # a Relationship
+# print("r1（a和b的关系）:")
+# print(r1)
+# print("\n")
+#
+# c = matcher.match("吃饭", name="吃饭").first()
+# r2 = rmatcher.match({a,c}).first()
+# print("r2（a和c的关系）:")
+# print(r2)
+# print("\n")
+#
+# print("c节点的id")
+# print(c)
+# print("\n")
 
 
 ########################################
@@ -39,9 +39,10 @@ print("\n")
 # 输出所有node ID
 ########################################
 
-# a = list(matcher.match(name="水果"))
+# a = list(matcher.match(name="杨九郎"))
 # print(a)
-
+a = list(matcher.match(label="明星"))
+print(a)
 ########################################
 # example3:
 # 知道id
