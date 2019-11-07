@@ -1,0 +1,10 @@
+1. 启动neo4j desktop , 然后open browser
+2. 创建两个测试节点：
+	CREATE (f:User {name:'Adam',age:42,male:true,kids:['Sam','Anna','Grace'], born:localdatetime('2015185T19:32:24'), place:point({latitude: 13.1, longitude: 33.46789})})-[:KNOWS {since: 1993}]->(b:User {name:'Jim',age:42}),(c:User {age:12})
+3. export all测试：
+	CALL apoc.export.json.all("/tmp/all.json",{useTypes:true})
+
+4. 如果报错的话
+5. 在neo4j的import文件夹下面创建一个tmp文件夹，在tmp文件夹下面创建一个all.json
+6. 重新启动neo4j
+7. 再试一次

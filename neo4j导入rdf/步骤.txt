@@ -1,0 +1,31 @@
+1.下载扩展插件的jar包。
+
+jar包下载地址：https://github.com/jbarrasa/neosemantics/releases。这一步需注意jar包和neo4j版本兼容问题。
+
+将其复制到<NEO_HOME>/plugins目录下。
+
+2.修改neo4j的配置文件。
+
+在<NEO_HOME>/conf/neo4j.conf文件的最后一行添加如下语句。
+
+dbms.unmanaged_extension_classes=semantics.extension=/rdf
+
+3.重启neo4j。
+
+4.验证是否配置成功。
+
+启动neo4j打开web端界面后，输入以下查询语句
+
+:GET /rdf/ping
+结果显示如下，表示已配置成功
+
+{"ping":"here!"}
+
+
+5. 导入rdf
+
+在neo4j browser中先运行
+CREATE INDEX ON :Resource(uri)
+
+然后使用如下语句即可导入RDF。
+CALL semantics.importRDF("file:///Users/yuhaomao/Desktop/rdf_robot.owl  ","RDF/XML", { shortenUrls: false, typesToLabels: true, commitSize: 9000 })
