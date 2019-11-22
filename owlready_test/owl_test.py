@@ -16,3 +16,12 @@ my_drug = Drug("my_drug")
 acetaminophen = Ingredient("acetaminophen")
 my_drug.has_for_ingredient = [acetaminophen]
 onto.save("hello.rdf")
+
+
+
+
+# add_class() 可以通过调用的时候选择class名字并且选择父节点
+def add_class(name, parent, onto):
+    with onto:
+        exec('class {}({}): pass'.format(name, parent))
+
