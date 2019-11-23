@@ -3,10 +3,11 @@ import uuid
 path = "/Users/yuhaomao/Desktop/AES-CN/owlready_test/hello.rdf"
 # iri= "http://www.semanticweb.org/yuhaomao/ontologies/2019/9/untitled-ontology-17"
 onto = get_ontology(path).load()
+
 # print(onto.Drug)
-with onto:
-    class Drug(Thing):
-        pass
+# with onto:
+#     class Drug(Thing):
+#         pass
 #     class Drug1(Thing):
 #         pass
 #     class Drug2(Thing):
@@ -17,26 +18,27 @@ with onto:
 #         domain = [Drug]
 #         range = [Ingredient]
 
-# my_drug111 = Drug("individual")
-# acetaminophen = Ingredient("acetaminophen")
-# my_drug.has_for_ingredient = [acetaminophen]
-# onto.save("hello111.rdf")
 
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # 添加单独一个class
 def add_class(name, parent,onto):
     with onto:
         exec('class {}({}): pass'.format(name, parent))
 # add_class("xxx", Thing,onto)
 
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # 创建uuid属于某个class
 def add_individual(class_name, parent_class, individual_name,onto):
-    print(individual_name)
-    print(type(individual_name))
     with onto:
-        # exec('class {class_name}({parent}): pass'.format(class_name=class_name, parent=parent_class))
+        exec('class {class_name}({parent}): pass'.format(class_name=class_name, parent=parent_class))
         exec('{class_name}("{individual_name}")'.format(class_name=class_name, individual_name=individual_name))
-# add_individual("Drug",Thing, "indivu",onto)
+# add_individual("xxx",Thing, "indivu",onto) # parent应该是写thing就可以, 参考objectproperty，可以改成onto.classname
 
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # 创建data_property
 # plan1
 def add_dataproperty(dataproperty_name,domain,range):
@@ -60,7 +62,27 @@ def add_dataproperty(dataproperty_name,domain_value,range_value):
     onto.has_for_synonym = ["acetaminophen", "paracétamol"]
 # add_dataproperty("has_for_synonym","Thing","str")
 
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # 添加 data_property 的value
+def add_data_value(individual_name,dataproperty_name,value):
+    exec('onto.{0}.{1}.append("{2}")'.format(individual_name,dataproperty_name, value))
+add_data_value("my_drug","has_for_synonym","int")
+# onto.my_drug.has_for_synonym.append("int")
+
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# 添加 object property
+# def add_objectproperty(domain_name,objectproprety,range_name):
+def add_objectproperty(domain_name,objectproprety,range_name):
+    with onto:
+        exec('class {0}(ObjectProperty): \n domain=[onto.{1}] \n range = [onto.{2}]'.format(objectproprety,domain_name,range_name))
+
+        # class has_for_ingredient111111(ObjectProperty):
+        #     domain = [onto.xxx]
+        #     range = [onto.Ingredient]
+# add_objectproperty("xxx","has_for_ingredient111111","Ingredient")
+
 
 onto.save("hello.rdf")
 
