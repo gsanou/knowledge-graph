@@ -12,6 +12,7 @@ from owl_test import *
 last_status = ""
 last_class = "Thing"
 i_new = "Thing"
+count = 0
 
 class JSON2RDF:
     """
@@ -169,10 +170,10 @@ def main():
 def datas_process(datas):
     global last_status
     global last_class
+    global count
     # global i_new
     datas_type = str(type(datas))
-    # print("line 162:")
-    # print(datas_type)
+
 
     if datas_type == "<class 'list'>":
         # print("zero: create UUID hasobject")
@@ -188,8 +189,13 @@ def datas_process(datas):
 
     if datas_type == "<class 'dict'>":
         # print("zero: create individual uuid")
-        individual_id = uuid.uuid4()
-        add_individual("super", individual_id)
+        # individual_id = uuid.uuid4()
+        individual_id = "individual_id" + str(count)
+        count += 1
+        if last_class == "Thing":
+            add_individual("super", individual_id)
+        else:
+            add_individual(last_class,individual_id)
         # print("for i in dictionary:")
         # print("if  .get(i) 是dict 或者list的话就创建class")
         # print("         first: create class XXX and lemma class(subclass)")
@@ -206,10 +212,17 @@ def datas_process(datas):
             tmp = last_class
             if str(type(datas.get(i))) == "<class 'dict'>":
                 add_class(i_new,last_class)
+                objectproperty_name = "has"+ str(i_new)
+                # print("xxxxxxxx")
+                # print(objectproperty_name)
+                if last_class == "Thing":
+                    add_objectproperty("super", objectproperty_name, i_new)
+                else:
+                    add_objectproperty(last_class,objectproperty_name,i_new)
                 last_class = i_new
                 # add_class("xxzzxxzx", "xxx")
-                print("i_new_209:")
-                print(i_new)
+                # print("i_new_209:")
+                # print(i_new)
                 # print("         first: create class XXX and lemma class(subclass)")
                 # print("         second: create dataproperty hasXXX")
                 # print("shi _____dict")
@@ -217,9 +230,18 @@ def datas_process(datas):
                 last_class = tmp
             if str(type(datas.get(i))) == "<class 'list'>":
                 add_class(i_new, last_class)
+
+                objectproperty_name = "has" + str(i_new)
+                # print("xxxxxxxx")
+                # print(objectproperty_name)
+                if last_class == "Thing":
+                    add_objectproperty("super", objectproperty_name, i_new)
+                else:
+                    add_objectproperty(last_class, objectproperty_name, i_new)
+
                 last_class = i_new
-                print("i_new_219")
-                print(i_new)
+                # print("i_new_219")
+                # print(i_new)
                 # print("         first: create class XXX and lemma class(subclass)")
                 # print("         second: create dataproperty hasXXX")
                 # print("shi _____list")
@@ -228,25 +250,36 @@ def datas_process(datas):
                 # pass
 
             if str(type(datas.get(i))) == "<class 'str'>":
-                # print("shi_____str")
+                data_property_name = "has"+ i
+                add_dataproperty(data_property_name,tmp,"str")
+                add_data_value(individual_id,data_property_name,datas.get(i))
                 datas_process(datas[i])
             if str(type(datas.get(i))) == "<class 'int'>":
-                print(datas.get(i))
+                data_property_name = "has" + i
+                add_dataproperty(data_property_name, tmp, "int")
+                add_data_value(individual_id, data_property_name, datas.get(i))
+                datas_process(datas.get(i))
             if str(type(datas.get(i))) == "<class 'float'>":
-                print(datas.get(i))
+                # print(datas.get(i))
+                datas_process(datas.get(i))
             if str(datas.get(i)) == "True":
-                print("true")
+                print("222222222222222")
+                # print("true")
+                datas_process("true")
             if str(type(datas.get(i))) == "false":
-                print("false")
+                print("555555555555555")
+                # print("false")
+                datas_process("false")
 
 
     if datas_type == "<class 'str'>":
         # print("之前dataproporty的value")
+        print("sssssssssssssssssssss")
         print(datas)
-
 
     if datas_type == "<class 'int'>":
         # print("之前dataproporty的value")
+        print("iiiiiiiiiiiiiiiiiii")
         print(datas)
 
 
