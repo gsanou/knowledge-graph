@@ -144,7 +144,7 @@ def main():
     # j2r = JSON2RDF()
     # reset_test_data()
     # filename  = "test_json"
-    # with codecs.open('/Users/yuhaomao/Desktop/MAD_JSON2RDF/111111.json', 'r', encoding='utf8') as f:
+    # with codecs.open('/Users/yuhaomao/Desktop/JSON_Sample/BasicFunctionBlocks/BasicFunctionBlocks/robotic/CCTARoSDK_Multi_Robot_Move_PTP.json', 'r', encoding='utf8') as f:
     with codecs.open('/Users/yuhaomao/Desktop/PublicDevice/Device.json', 'r', encoding='utf8') as f:
         json_str = f.read()
 
@@ -249,7 +249,7 @@ def datas_process(datas):
                 last_class = tmp
                 # pass
 
-            if str(type(datas.get(i))) == "<class 'str'>":
+            if str(type(datas.get(i))) == "<class 'str'>" or str(datas.get(i)) == "True" or str(type(datas.get(i))) == "false":
                 data_property_name = "has"+ i
                 add_dataproperty(data_property_name,tmp,"str")
                 add_data_value(individual_id,data_property_name,datas.get(i))
@@ -262,20 +262,14 @@ def datas_process(datas):
             if str(type(datas.get(i))) == "<class 'float'>":
                 # print(datas.get(i))
                 datas_process(datas.get(i))
-            if str(datas.get(i)) == "True":
-                print("222222222222222")
-                # print("true")
-                datas_process("true")
-            if str(type(datas.get(i))) == "false":
-                print("555555555555555")
-                # print("false")
-                datas_process("false")
+
 
 
     if datas_type == "<class 'str'>":
         # print("之前dataproporty的value")
         print("sssssssssssssssssssss")
         print(datas)
+
 
     if datas_type == "<class 'int'>":
         # print("之前dataproporty的value")
