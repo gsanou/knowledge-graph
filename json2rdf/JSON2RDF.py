@@ -13,6 +13,8 @@ last_status = ""
 last_class = "Thing"
 i_new = "Thing"
 count = 0
+last_individual = ""
+last_objectproperty = ""
 
 class JSON2RDF:
     """
@@ -171,21 +173,24 @@ def datas_process(datas):
     global last_status
     global last_class
     global count
+    global last_individual
+    global last_objectproperty
     # global i_new
     datas_type = str(type(datas))
 
-
     if datas_type == "<class 'list'>":
-        # print("zero: create UUID hasobject")
-        # print("first: create class and lemma class(subclass)")
-        # print("second: create dataproperty hasXXX")
-        # print("forth: create dataproperty hasobject")
-        # print("for i in list:            datas_process[i]")
+
+        tmp_last_individual = last_individual
+        tmp_last_objectproperty = last_objectproperty
+
         for i in datas:
             # print("line172")
             # print(i)
             # i_new = str(i).replace(" ","_")
             datas_process(i)
+            last_individual = tmp_last_individual
+            last_objectproperty = tmp_last_objectproperty
+
 
     if datas_type == "<class 'dict'>":
         # print("zero: create individual uuid")
@@ -196,13 +201,17 @@ def datas_process(datas):
             add_individual("super", individual_id)
         else:
             add_individual(last_class,individual_id)
-        # print("for i in dictionary:")
-        # print("if  .get(i) 是dict 或者list的话就创建class")
-        # print("         first: create class XXX and lemma class(subclass)")
-        # print("         second: create dataproperty hasXXX")
-        # # print("third: create individual UUID")
-        # print("else: .get(i)是string或者int的话，就创建data property")
-        # print("datas_process(dictionary.get(i))")
+
+        if last_individual == "" or last_objectproperty == "":
+            pass
+        else:
+            add_individual_individual_objectproperty(last_individual,last_objectproperty,individual_id)
+
+        last_individual = individual_id
+
+        # tmp_last_individual = last_individual
+        # tmp_last_objectproperty = last_objectproperty
+
         last_status = "dict"
         for i in datas:
             i_new = last_class+"__"+string_process(i)
@@ -210,16 +219,24 @@ def datas_process(datas):
             # print(i)
             # print(str(type(datas.get(i))))
             tmp = last_class
+            tmp_last_individual = last_individual
+            tmp_last_objectproperty = last_objectproperty
+
             if str(type(datas.get(i))) == "<class 'dict'>":
                 add_class(i_new,last_class)
                 objectproperty_name = "has"+ str(i_new)
                 # print("xxxxxxxx")
                 # print(objectproperty_name)
+
                 if last_class == "Thing":
                     add_objectproperty("super", objectproperty_name, i_new)
                 else:
                     add_objectproperty(last_class,objectproperty_name,i_new)
+
                 last_class = i_new
+                last_individual = individual_id
+                last_objectproperty = objectproperty_name
+
                 # add_class("xxzzxxzx", "xxx")
                 # print("i_new_209:")
                 # print(i_new)
@@ -228,6 +245,9 @@ def datas_process(datas):
                 # print("shi _____dict")
                 datas_process(datas.get(i))
                 last_class = tmp
+                last_individual = tmp_last_individual
+                last_objectproperty = tmp_last_objectproperty
+
             if str(type(datas.get(i))) == "<class 'list'>":
                 add_class(i_new, last_class)
 
@@ -240,6 +260,8 @@ def datas_process(datas):
                     add_objectproperty(last_class, objectproperty_name, i_new)
 
                 last_class = i_new
+                last_objectproperty = objectproperty_name
+
                 # print("i_new_219")
                 # print(i_new)
                 # print("         first: create class XXX and lemma class(subclass)")
@@ -247,22 +269,37 @@ def datas_process(datas):
                 # print("shi _____list")
                 datas_process(datas[i])
                 last_class = tmp
+                last_individual = tmp_last_individual
+                last_objectproperty = tmp_last_objectproperty
                 # pass
+
 
             if str(type(datas.get(i))) == "<class 'str'>" or str(datas.get(i)) == "True" or str(type(datas.get(i))) == "false":
                 data_property_name = "has"+ i
                 add_dataproperty(data_property_name,tmp,"str")
                 add_data_value(individual_id,data_property_name,datas.get(i))
-                datas_process(datas[i])
+                # datas_process(datas[i])
+                # last_class = tmp
+                # last_individual = tmp_last_individual
+                # last_objectproperty = tmp_last_objectproperty
+
+
             if str(type(datas.get(i))) == "<class 'int'>":
                 data_property_name = "has" + i
                 add_dataproperty(data_property_name, tmp, "int")
                 add_data_value(individual_id, data_property_name, datas.get(i))
-                datas_process(datas.get(i))
+                # datas_process(datas.get(i))
+
+
             if str(type(datas.get(i))) == "<class 'float'>":
                 # print(datas.get(i))
-                datas_process(datas.get(i))
-
+                data_property_name = "has" + i
+                add_dataproperty(data_property_name, tmp, "int")
+                add_data_value(individual_id, data_property_name, datas.get(i))
+                # datas_process(datas.get(i))
+            # last_class = tmp
+            # last_individual = tmp_last_individual
+            # last_objectproperty = tmp_last_objectproperty
 
 
     if datas_type == "<class 'str'>":
