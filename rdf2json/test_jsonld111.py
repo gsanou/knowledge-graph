@@ -1,67 +1,116 @@
-import rdflib
-import json
+import copy
 
-def create_class(parent,child):
-    context = [parent,child]
-    jsondata = json.dumps(context, indent=4, separators=(',', ': '))
-    filename = "filename.json"
-    f = open(filename, 'a')
-    f.write(jsondata)
-    f.close()
 
-def query_class():
-    g = rdflib.Graph()
-    g.parse("/Users/yuhaomao/Desktop/MAD_JSON2RDF/hello2222.rdf", format="xml")
-    # <a,?,?>
-    q = """
-    SELECT ?subject ?object
-	    WHERE { ?subject rdfs:subClassOf ?object }
-    """
-    x = g.query(q)
-    t = list(x)
-    for i in t:
-        child = i[0].split("#")[1]
-        parent = i[1].split("#")[1]
-        print(child)
-        print(parent)
-        # create_class(parent,child)
-        # jsondata = json.dumps(jsontext, indent=4, separators=(',', ': '))
 
-def query_individual():
-    g = rdflib.Graph()
-    g.parse("/Users/yuhaomao/Desktop/MAD_JSON2RDF/hello2222.rdf", format="xml")
+a = {"1":{"2":{"3":{"4":{"5":{"6":{"7":{"8":{"9":{"10":"11"}}}}}}}}},"13":{"18":"12"}}
+b = {"1":"2","3":"4","5":"6"}
+index_list = []
+flag = False
 
-    q = """
-        SELECT ?individual ?type
-    	WHERE 
-    	{ ?individual rdf:type ?type .
-    	}
-        """
-    x = g.query(q)
-    t = list(x)
-    for i in t:
-        # print(str(i[1]))
-        # print(str(i[1])[-15:])
-        if str(i[1])[-15:] == "NamedIndividual":
-            print("individual")
-            print(i[0])
+def iteration(a,target):
+    global index_list
+    global flag
+    for i in a:
+        if i == str(target):
+            # print("i")
+            # print(index_result)
+            flag = True
+            index_list.append(i)
+            break
+        else:
+            if type(a[i]) == dict or type(a[i]) == list:
+                iteration(a[i],target)
+            elif type(a[i]) == str and a[i] == str(target):
+                flag = True
+                index_list.append(i)
+                break
+        if flag == True:
+            index_list.append(i)
+            break
+    # print(index_list)
 
-def query_individual_content():
-    g = rdflib.Graph()
-    g.parse("/Users/yuhaomao/Desktop/MAD_JSON2RDF/hello2222.rdf", format="xml")
+# replace_item = {"11":"aaa"}
+# for i in replace_item:
+#     target = i
+# print(target)
+# iteration(a,target)
+# index_result = index_list
+# print(index_result)
+#
+# tmp = "a"
+# for i in range(len(index_result)):
+#     tmp = tmp + "[\"" + index_result[::-1][i] + "\"]"
+#
+# if index_result[0] == target:
+#     exec('{0} = [{0},"{1}"]'.format(tmp,replace_item[target]))
+# else:
+#     exec('{0} = "{1}"'.format(tmp, replace_item[target]))
+#
+#
+# print(a)
 
-    q = """
-            SELECT ?individual
-        	WHERE 
-        	{ ?individual rdf:about="#individual_id0" .
-        	}
-            """
-    x = g.query(q)
-    t = list(x)
-    print(t)
-if __name__ == "__main__":
-    # create()
-    # query_class()
-    # query_individual()
-    query_individual_content()
+def replace(main_dictionary,dictionary_name,replace_item):
+    global index_list
+    global flag
+    for i in replace_item:
+        target = i
+        value = replace_item[i]
+        print("ssssss")
+        print(target)
+        print(value)
 
+    iteration(main_dictionary, target)
+    index_result_key = copy.deepcopy(index_list)
+    print(index_result_key)
+    print(index_list)
+
+    flag = False
+    index_list = []
+    # print("index_list")
+    # print(index_list)
+    iteration(main_dictionary, value)
+    index_result_value = copy.deepcopy(index_list)
+    # print("""value""")
+    # print(index_result_value)
+
+    if len(index_result_key) != 0 and len(index_result_value) == 0:
+        tmp = dictionary_name
+        for i in range(len(index_result_key)):
+            tmp = tmp + "[\"" + index_result_key[::-1][i] + "\"]"
+
+        if index_result_key[0] == target:
+            exec('{0} = [{0},"{1}"]'.format(tmp, replace_item[target]))
+        else:
+            xxx = {target:replace_item[target]}
+            exec('{0} = {1}'.format(tmp, xxx))
+
+        print(a)
+
+    if len(index_result_key) == 0 and len(index_result_value) == 0:
+        main_dictionary[target] = value
+        print(a)
+
+    if len(index_result_key) != 0 and len(index_result_value) != 0:
+        t1 = main_dictionary[value]
+        t2 = {value:t1}
+        tmp_value = copy.deepcopy(t2)
+
+        del main_dictionary[value]
+
+        tmp = dictionary_name
+        for i in range(len(index_result_key)):
+            tmp = tmp + "[\"" + index_result_key[::-1][i] + "\"]"
+
+        if index_result_key[0] == target:
+            exec('{0} = [{0},"{1}"]'.format(tmp, tmp_value))
+        else:
+            xxx = {target:tmp_value}
+            exec('{0} = {1}'.format(tmp, xxx))
+        print(a)
+
+if __name__ == '__main__':
+    print(a)
+    replace_item = {"11":"13"}
+    replace(a,"a",replace_item)
+    # a["1"]["2"]["3"]["4"]["5"]["6"]["7"]["8"]["9"]["10"] = {"11":"13"}
+    # print(a)
