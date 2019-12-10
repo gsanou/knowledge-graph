@@ -43,32 +43,49 @@ def query_individual():
     for i in t:
         # print(str(i[1]))
         # print(str(i[1])[-15:])
+        print("xxxxx")
+        print(i)
         if str(i[1])[-15:] == "NamedIndividual":
             print("individual")
             print(i[0])
 
-def query_individual_content():
+def query_individual_content_individual(rdf_about,individual_name):
     g = rdflib.Graph()
     # g.parse("/Users/yuhaomao/Desktop/MAD_JSON2RDF/hello2222.rdf", format="xml")
     g.parse("/Users/yuhaomao/Desktop/MAD_JSON2RDF/hello2222.rdf", format="xml")
-            # / Users / yuhaomao / Desktop / MAD_JSON2RDF / hello2222.rdf
 
     q = """
-        SELECT ?s ?p
-        WHERE
-        {
-         <file:///Users/yuhaomao/Desktop/MAD_JSON2RDF/hello2222.rdf#individual_id1> ?s ?p .
-        }
-        """
+        SELECT ?s ?p 
+        WHERE{
+        <file:///Users/yuhaomao/Desktop/MAD_JSON2RDF/hello2222.rdf#individual_id69> ?s ?p .
+         ?p rdf:type <http://www.w3.org/2002/07/owl#NamedIndividual> .
+         }
+         """
 
     x = g.query(q)
     t = list(x)
     print(t)
-    for i in t:
-        print(i)
+    if len(t) == 0:
+        print("KKKKOOOONNNNGGGG")
+    else:
+        for i in t:
+            print(i[1])
+        # child = i[0].split("#")[1]
+        # print(child)
 
+
+def rdf_about():
+    g = rdflib.Graph()
+    # g.parse("/Users/yuhaomao/Desktop/MAD_JSON2RDF/hello2222.rdf", format="xml")
+    result = g.parse("/Users/yuhaomao/Desktop/MAD_JSON2RDF/hello2222.rdf", format="xml")
+    for i in result:
+        rdf_about = i[0].split("#")[0]
+        break
+    return rdf_about
 if __name__ == "__main__":
+    rdf_about = rdf_about()
+    print(rdf_about)
     # create()
     # query_class()
     # query_individual()
-    query_individual_content()
+    query_individual_content_individual(rdf_about,"individual_id69")
