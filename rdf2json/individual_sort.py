@@ -33,6 +33,7 @@ def replace(main_dictionary,dictionary_name,replace_item):
     global flag
     # exec('{0} = {1}'.format(dictionary_name,main_dictionary))
     a = main_dictionary
+    b = copy.deepcopy(main_dictionary)
     for i in replace_item:
         target = i
         value = replace_item[i]
@@ -59,17 +60,29 @@ def replace(main_dictionary,dictionary_name,replace_item):
         tmp = dictionary_name
         for i in range(len(index_result_key)):
             tmp = tmp + "[\"" + index_result_key[::-1][i] + "\"]"
+            b = b[index_result_key[::-1][i]]
         print("sdsdad")
         print(tmp)
-        if index_result_key[0] == target:
-            exec('{0} = [{0},"{1}"]'.format(tmp, replace_item[target]))
-        else:
-            xxx = {target:replace_item[target]}
-            print("xxxx")
-            print(xxx)
-            print(tmp)
-            exec('{0} = {1}'.format(tmp, xxx))
 
+        if type(b) == str:
+            if index_result_key[0] == target:
+                exec('{0} = [{0},"{1}"]'.format(tmp, replace_item[target]))
+            else:
+                xxx = {target:replace_item[target]}
+                print("xxxx")
+                print(xxx)
+                print(tmp)
+                exec('{0} = {1}'.format(tmp, xxx))
+
+        if type(b) == list:
+            if index_result_key[0] == target:
+                exec('{0}.append("{1}")'.format(tmp, replace_item[target]))
+            else:
+                xxx = {target:replace_item[target]}
+                print("xxxx")
+                print(xxx)
+                print(tmp)
+                exec('{0} = {1}'.format(tmp, xxx))
         print(main_dictionary)
 
     if len(index_result_key) == 0 and len(index_result_value) == 0:
@@ -124,9 +137,9 @@ def replace(main_dictionary,dictionary_name,replace_item):
 #     #     replace(a,"a",replace_item)
 
 a = {}
-list = [{"11": "13"}, {"11": "15"},{"11": "14"}, {"19": "20"}, {"30": "11"}]
+list1 = [{"11": "13"}, {"11": "15"},{"11": "14"}, {"19": "20"}, {"30": "11"}]
 # list = [{"30":"1"}]
-for i in list:
+for i in list1:
     replace_item = i
     replace(a, "a", replace_item)
 print(a)
