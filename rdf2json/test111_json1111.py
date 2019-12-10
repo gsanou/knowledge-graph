@@ -43,25 +43,23 @@ def query_individual():
     for i in t:
         # print(str(i[1]))
         # print(str(i[1])[-15:])
-        print("xxxxx")
-        print(i)
+        # print("xxxxx")
+        # print(i)
         if str(i[1])[-15:] == "NamedIndividual":
             print("individual")
             print(i[0])
+            query_individual_content_individual(rdf_about, str(i[0].split("#")[1]))
+
 
 def query_individual_content_individual(rdf_about,individual_name):
+    print("individual name")
+    print(individual_name)
     g = rdflib.Graph()
     # g.parse("/Users/yuhaomao/Desktop/MAD_JSON2RDF/hello2222.rdf", format="xml")
     g.parse("/Users/yuhaomao/Desktop/MAD_JSON2RDF/hello2222.rdf", format="xml")
 
-    q = """
-        SELECT ?s ?p 
-        WHERE{
-        <file:///Users/yuhaomao/Desktop/MAD_JSON2RDF/hello2222.rdf#individual_id69> ?s ?p .
-         ?p rdf:type <http://www.w3.org/2002/07/owl#NamedIndividual> .
-         }
-         """
-
+    q = "SELECT ?s ?p WHERE{<" + rdf_about + "#" + individual_name + "> ?s ?p . ?p rdf:type <http://www.w3.org/2002/07/owl#NamedIndividual> .}"
+    # q = "SELECT ?s ?p WHERE{<file:///Users/yuhaomao/Desktop/MAD_JSON2RDF/hello2222.rdf#individual_id60> ?s ?p . ?p rdf:type <http://www.w3.org/2002/07/owl#NamedIndividual> .}"
     x = g.query(q)
     t = list(x)
     print(t)
@@ -69,7 +67,9 @@ def query_individual_content_individual(rdf_about,individual_name):
         print("KKKKOOOONNNNGGGG")
     else:
         for i in t:
-            print(i[1])
+            print("yyyyyyyyyyyyyyyyyy")
+            print(i[1].split("#")[1])
+            print("cccccc")
         # child = i[0].split("#")[1]
         # print(child)
 
@@ -87,5 +87,5 @@ if __name__ == "__main__":
     print(rdf_about)
     # create()
     # query_class()
-    # query_individual()
-    query_individual_content_individual(rdf_about,"individual_id69")
+    query_individual()
+    # query_individual_content_individual(rdf_about,"individual_id61")
