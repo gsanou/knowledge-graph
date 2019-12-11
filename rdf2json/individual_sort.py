@@ -63,17 +63,17 @@ def replace(main_dictionary,dictionary_name,replace_item):
 
     iteration(main_dictionary, target)
     index_result_key = copy.deepcopy(index_list)
-    print("?????")
-    print(index_result_key)
-    print(index_list)
-    print(target)
-    print(value)
+    # print("?????")
+    # print(index_result_key)
+    # print(index_list)
+    # print(target)
+    # print(value)
     flag = False
     index_list = []
     iteration(main_dictionary, value)
     index_result_value = copy.deepcopy(index_list)
-    print("""value""")
-    print(index_result_value)
+    # print("""value""")
+    # print(index_result_value)
 
     if len(index_result_key) != 0 and len(index_result_value) == 0:
         """
@@ -81,12 +81,12 @@ def replace(main_dictionary,dictionary_name,replace_item):
         value不在dictionary里
         """
         tmp = dictionary_name
-        print("zzzzzzzzzzzzzzzzzzzz")
-        print(index_result_key)
+        # print("zzzzzzzzzzzzzzzzzzzz")
+        # print(index_result_key)
         index_result_key.reverse()
         for i in range(len(index_result_key)):
-            print("//////")
-            print(b)
+            # print("//////")
+            # print(b)
             if type(index_result_key[i]) == str:
                 tmp = tmp + "[\"" + index_result_key[i] + "\"]"
 
@@ -95,21 +95,21 @@ def replace(main_dictionary,dictionary_name,replace_item):
             # tmp = tmp + "[\"" + index_result_key[::-1][i] + "\"]"
 
             b = b[index_result_key[i]]
-            print("........")
-            print(b)
-            print(main_dictionary)
-        print("sdsdad")
-        print(tmp)
-        print(b)
+            # print("........")
+            # print(b)
+            # print(main_dictionary)
+        # print("sdsdad")
+        # print(tmp)
+        # print(b)
 
         if type(b) == str:
             if index_result_key[-1] == target:
                 exec('{0} = [{0},"{1}"]'.format(tmp, replace_item[target]))
             else:
                 xxx = {target:replace_item[target]}
-                print("xxxx")
-                print(xxx)
-                print(tmp)
+                # print("xxxx")
+                # print(xxx)
+                # print(tmp)
                 exec('{0} = {1}'.format(tmp, xxx))
 
         if type(b) == list:
@@ -117,9 +117,9 @@ def replace(main_dictionary,dictionary_name,replace_item):
                 exec('{0}.append("{1}")'.format(tmp, replace_item[target]))
             else:
                 xxx = {target:replace_item[target]}
-                print("xxxx")
-                print(xxx)
-                print(tmp)
+                # print("xxxx")
+                # print(xxx)
+                # print(tmp)
                 exec('{0} = {1}'.format(tmp, xxx))
 
         if type(b) == dict:
@@ -127,18 +127,18 @@ def replace(main_dictionary,dictionary_name,replace_item):
                 exec('{0} = [{0},"{1}"]'.format(tmp, replace_item[target]))
             else:
                 xxx = {target:replace_item[target]}
-                print("xxxx")
-                print(xxx)
-                print(tmp)
+                # print("xxxx")
+                # print(xxx)
+                # print(tmp)
                 exec('{0} = {1}'.format(tmp, xxx))
-        print(main_dictionary)
+        # print(main_dictionary)
 
     if len(index_result_key) == 0 and len(index_result_value) == 0:
         """
         key和value都不在dictionary里
         """
         main_dictionary[target] = value
-        print(main_dictionary)
+        # print(main_dictionary)
 
     if len(index_result_key) != 0 and len(index_result_value) != 0:
         """
@@ -151,22 +151,22 @@ def replace(main_dictionary,dictionary_name,replace_item):
         tmp = dictionary_name
         index_result_key.reverse()
         for i in range(len(index_result_key)):
-            print("index_result_key[i]index_result_key[i]index_result_key[i]")
-            print(index_result_key[i])
+            # print("index_result_key[i]index_result_key[i]index_result_key[i]")
+            # print(index_result_key[i])
             if type(index_result_key[i]) == str:
-                print("str str str")
+                # print("str str str")
                 tmp = tmp + "[\"" + index_result_key[i] + "\"]"
             if type(index_result_key[i]) == int:
-                print("int int int ")
+                # print("int int int ")
                 tmp = tmp + "[" + str(index_result_key[i]) + "]"
-            print("bbbbbbbb")
-            print(b)
+            # print("bbbbbbbb")
+            # print(b)
 
             b = b[index_result_key[i]]
         if index_result_key[-1] == target:
-            print("jdasjdsadn")
-            print(b)
-            print(tmp_value)
+            # print("jdasjdsadn")
+            # print(b)
+            # print(tmp_value)
             if type(b) == str:
                 exec('{0} = ["{2}",{1}]'.format(tmp, tmp_value,b))
             if type(b) == list:
@@ -176,12 +176,12 @@ def replace(main_dictionary,dictionary_name,replace_item):
 
         else:
             xxx = {target:tmp_value}
-            print("tttttttttttttttttttttttttttttttttttt")
-            print(tmp)
-            print(xxx)
+            # print("tttttttttttttttttttttttttttttttttttt")
+            # print(tmp)
+            # print(xxx)
             exec('{0} = {1}'.format(tmp, xxx))
         del main_dictionary[value]
-        print(main_dictionary)
+        # print(main_dictionary)
     if len(index_result_key) == 0 and len(index_result_value) != 0:
         """
         key不在dictionary里
@@ -192,7 +192,7 @@ def replace(main_dictionary,dictionary_name,replace_item):
 
         xxx = {value:tmp}
         main_dictionary[target] = xxx
-        print(main_dictionary)
+        # print(main_dictionary)
 
     flag = False
     index_list = []
