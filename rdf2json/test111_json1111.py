@@ -1,5 +1,7 @@
 import rdflib
 import json
+from individual_sort import *
+
 
 def create_class(parent,child):
     context = [parent,child]
@@ -28,7 +30,7 @@ def query_class():
         # create_class(parent,child)
         # jsondata = json.dumps(jsontext, indent=4, separators=(',', ': '))
 
-def query_individual():
+def query_individual(a,rdf_about):
     g = rdflib.Graph()
     g.parse("/Users/yuhaomao/Desktop/MAD_JSON2RDF/hello2222.rdf", format="xml")
 
@@ -48,10 +50,10 @@ def query_individual():
         if str(i[1])[-15:] == "NamedIndividual":
             print("individual")
             print(i[0])
-            query_individual_content_individual(rdf_about, str(i[0].split("#")[1]))
+            query_individual_content_individual(rdf_about, str(i[0].split("#")[1]),a)
 
 
-def query_individual_content_individual(rdf_about,individual_name):
+def query_individual_content_individual(rdf_about,individual_name,dict):
     print("individual name")
     print(individual_name)
     g = rdflib.Graph()
@@ -70,6 +72,11 @@ def query_individual_content_individual(rdf_about,individual_name):
             print("yyyyyyyyyyyyyyyyyy")
             print(i[1].split("#")[1])
             print("cccccc")
+            target = individual_name
+            value = i[1].split("#")[1]
+            replace_item = {target:value}
+            a = dict
+            replace(a,"a",replace_item)
         # child = i[0].split("#")[1]
         # print(child)
 
@@ -82,10 +89,16 @@ def rdf_about():
         rdf_about = i[0].split("#")[0]
         break
     return rdf_about
+
+
 if __name__ == "__main__":
+    a = {}
+
     rdf_about = rdf_about()
     print(rdf_about)
     # create()
     # query_class()
-    query_individual()
-    # query_individual_content_individual(rdf_about,"individual_id61")
+    query_individual(a,rdf_about)
+
+    print(a)
+
