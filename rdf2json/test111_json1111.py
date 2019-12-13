@@ -152,9 +152,12 @@ def query_individual_content(a,individual_name,rdf_about):
         if dataproperty_value != "NamedIndividual" and dataproperty != "type":
             if dataproperty_value in individual_list:
                 if dataproperty in sub_individuals :
-                    copy = sub_individuals[dataproperty]
-                    tmp = [copy,dataproperty_value]
-                    sub_individuals[dataproperty] = tmp
+                    if type(sub_individuals[dataproperty]) == str:
+                        copy = sub_individuals[dataproperty]
+                        tmp = [copy,dataproperty_value]
+                        sub_individuals[dataproperty] = tmp
+                    if type(sub_individuals[dataproperty]) == list:
+                        sub_individuals[dataproperty].append(dataproperty_value)
                 else:
                     sub_individuals[dataproperty] = dataproperty_value
             else:
