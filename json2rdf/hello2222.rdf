@@ -1,0 +1,1644 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="/Users/yuhaomao/Desktop/MAD_JSON2RDF/hello2222.rdf"
+         xmlns="/Users/yuhaomao/Desktop/MAD_JSON2RDF/hello2222.rdf#">
+
+<owl:Ontology rdf:about="/Users/yuhaomao/Desktop/MAD_JSON2RDF/hello2222.rdf"/>
+
+<owl:ObjectProperty rdf:about="#hasThing__library_information">
+  <rdfs:domain rdf:resource="#super"/>
+  <rdfs:range rdf:resource="#Thing__library_information"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__library_information__release_information">
+  <rdfs:domain rdf:resource="#Thing__library_information"/>
+  <rdfs:range rdf:resource="#Thing__library_information__release_information"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__library_configuration">
+  <rdfs:domain rdf:resource="#super"/>
+  <rdfs:range rdf:resource="#Thing__library_configuration"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices">
+  <rdfs:domain rdf:resource="#super"/>
+  <rdfs:range rdf:resource="#Thing__devices"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__Controller">
+  <rdfs:domain rdf:resource="#Thing__devices"/>
+  <rdfs:range rdf:resource="#Thing__devices__Controller"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__Controller__ComputingDevice">
+  <rdfs:domain rdf:resource="#Thing__devices__Controller"/>
+  <rdfs:range rdf:resource="#Thing__devices__Controller__ComputingDevice"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__Controller__ComputingDevice__properties">
+  <rdfs:domain rdf:resource="#Thing__devices__Controller__ComputingDevice"/>
+  <rdfs:range rdf:resource="#Thing__devices__Controller__ComputingDevice__properties"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__Controller__ComputingDevice__parameters">
+  <rdfs:domain rdf:resource="#Thing__devices__Controller__ComputingDevice"/>
+  <rdfs:range rdf:resource="#Thing__devices__Controller__ComputingDevice__parameters"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__Controller__ComputingDevice__parameters__ports">
+  <rdfs:domain rdf:resource="#Thing__devices__Controller__ComputingDevice__parameters"/>
+  <rdfs:range rdf:resource="#Thing__devices__Controller__ComputingDevice__parameters__ports"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__Controller__ComputingDevice__parameters__runtime">
+  <rdfs:domain rdf:resource="#Thing__devices__Controller__ComputingDevice__parameters"/>
+  <rdfs:range rdf:resource="#Thing__devices__Controller__ComputingDevice__parameters__runtime"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__Controller__ComputingDevice__parameters__runtime__forte">
+  <rdfs:domain rdf:resource="#Thing__devices__Controller__ComputingDevice__parameters__runtime"/>
+  <rdfs:range rdf:resource="#Thing__devices__Controller__ComputingDevice__parameters__runtime__forte"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__Robot">
+  <rdfs:domain rdf:resource="#Thing__devices"/>
+  <rdfs:range rdf:resource="#Thing__devices__Robot"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__Robot__RobotArm">
+  <rdfs:domain rdf:resource="#Thing__devices__Robot"/>
+  <rdfs:range rdf:resource="#Thing__devices__Robot__RobotArm"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__Robot__RobotArm__properties">
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__RobotArm"/>
+  <rdfs:range rdf:resource="#Thing__devices__Robot__RobotArm__properties"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__Robot__RobotArm__parameters">
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__RobotArm"/>
+  <rdfs:range rdf:resource="#Thing__devices__Robot__RobotArm__parameters"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__Robot__RobotArm__parameters__ports">
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__RobotArm__parameters"/>
+  <rdfs:range rdf:resource="#Thing__devices__Robot__RobotArm__parameters__ports"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__Robot__RobotArm__parameters__driver">
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__RobotArm__parameters"/>
+  <rdfs:range rdf:resource="#Thing__devices__Robot__RobotArm__parameters__driver"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__Robot__RobotArm__parameters__driver__parameters">
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__RobotArm__parameters__driver"/>
+  <rdfs:range rdf:resource="#Thing__devices__Robot__RobotArm__parameters__driver__parameters"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__Robot__RobotArm__parameters__ros">
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__RobotArm__parameters"/>
+  <rdfs:range rdf:resource="#Thing__devices__Robot__RobotArm__parameters__ros"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__Robot__RobotArm__parameters__ros__rosMessage">
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__RobotArm__parameters__ros"/>
+  <rdfs:range rdf:resource="#Thing__devices__Robot__RobotArm__parameters__ros__rosMessage"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__Robot__Vehicle">
+  <rdfs:domain rdf:resource="#Thing__devices__Robot"/>
+  <rdfs:range rdf:resource="#Thing__devices__Robot__Vehicle"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__Robot__Vehicle__properties">
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__Vehicle"/>
+  <rdfs:range rdf:resource="#Thing__devices__Robot__Vehicle__properties"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__Robot__Vehicle__parameters">
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__Vehicle"/>
+  <rdfs:range rdf:resource="#Thing__devices__Robot__Vehicle__parameters"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__Robot__Vehicle__parameters__ports">
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__Vehicle__parameters"/>
+  <rdfs:range rdf:resource="#Thing__devices__Robot__Vehicle__parameters__ports"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__Robot__Vehicle__parameters__driver">
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__Vehicle__parameters"/>
+  <rdfs:range rdf:resource="#Thing__devices__Robot__Vehicle__parameters__driver"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__Robot__Vehicle__parameters__driver__parameters">
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__Vehicle__parameters__driver"/>
+  <rdfs:range rdf:resource="#Thing__devices__Robot__Vehicle__parameters__driver__parameters"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__Robot__Vehicle__parameters__ros">
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__Vehicle__parameters"/>
+  <rdfs:range rdf:resource="#Thing__devices__Robot__Vehicle__parameters__ros"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__Robot__Vehicle__parameters__ros__rosMessage">
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__Vehicle__parameters__ros"/>
+  <rdfs:range rdf:resource="#Thing__devices__Robot__Vehicle__parameters__ros__rosMessage"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__end_effector">
+  <rdfs:domain rdf:resource="#Thing__devices"/>
+  <rdfs:range rdf:resource="#Thing__devices__end_effector"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__end_effector__Gripper">
+  <rdfs:domain rdf:resource="#Thing__devices__end_effector"/>
+  <rdfs:range rdf:resource="#Thing__devices__end_effector__Gripper"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__end_effector__Gripper__properties">
+  <rdfs:domain rdf:resource="#Thing__devices__end_effector__Gripper"/>
+  <rdfs:range rdf:resource="#Thing__devices__end_effector__Gripper__properties"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__end_effector__Gripper__parameters">
+  <rdfs:domain rdf:resource="#Thing__devices__end_effector__Gripper"/>
+  <rdfs:range rdf:resource="#Thing__devices__end_effector__Gripper__parameters"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__end_effector__Gripper__parameters__ports">
+  <rdfs:domain rdf:resource="#Thing__devices__end_effector__Gripper__parameters"/>
+  <rdfs:range rdf:resource="#Thing__devices__end_effector__Gripper__parameters__ports"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__end_effector__Gripper__parameters__driver">
+  <rdfs:domain rdf:resource="#Thing__devices__end_effector__Gripper__parameters"/>
+  <rdfs:range rdf:resource="#Thing__devices__end_effector__Gripper__parameters__driver"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__end_effector__Gripper__parameters__driver__parameters">
+  <rdfs:domain rdf:resource="#Thing__devices__end_effector__Gripper__parameters__driver"/>
+  <rdfs:range rdf:resource="#Thing__devices__end_effector__Gripper__parameters__driver__parameters"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__end_effector__Gripper__parameters__ros">
+  <rdfs:domain rdf:resource="#Thing__devices__end_effector__Gripper__parameters"/>
+  <rdfs:range rdf:resource="#Thing__devices__end_effector__Gripper__parameters__ros"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__end_effector__Gripper__parameters__ros__rosMessage">
+  <rdfs:domain rdf:resource="#Thing__devices__end_effector__Gripper__parameters__ros"/>
+  <rdfs:range rdf:resource="#Thing__devices__end_effector__Gripper__parameters__ros__rosMessage"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__Vision">
+  <rdfs:domain rdf:resource="#Thing__devices"/>
+  <rdfs:range rdf:resource="#Thing__devices__Vision"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__Vision__Camera">
+  <rdfs:domain rdf:resource="#Thing__devices__Vision"/>
+  <rdfs:range rdf:resource="#Thing__devices__Vision__Camera"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__Vision__Camera__properties">
+  <rdfs:domain rdf:resource="#Thing__devices__Vision__Camera"/>
+  <rdfs:range rdf:resource="#Thing__devices__Vision__Camera__properties"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__Vision__Camera__parameters">
+  <rdfs:domain rdf:resource="#Thing__devices__Vision__Camera"/>
+  <rdfs:range rdf:resource="#Thing__devices__Vision__Camera__parameters"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__Vision__Camera__parameters__ports">
+  <rdfs:domain rdf:resource="#Thing__devices__Vision__Camera__parameters"/>
+  <rdfs:range rdf:resource="#Thing__devices__Vision__Camera__parameters__ports"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__Vision__Camera__parameters__driver">
+  <rdfs:domain rdf:resource="#Thing__devices__Vision__Camera__parameters"/>
+  <rdfs:range rdf:resource="#Thing__devices__Vision__Camera__parameters__driver"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__Vision__Camera__parameters__driver__parameters">
+  <rdfs:domain rdf:resource="#Thing__devices__Vision__Camera__parameters__driver"/>
+  <rdfs:range rdf:resource="#Thing__devices__Vision__Camera__parameters__driver__parameters"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__Vision__Camera__parameters__ros">
+  <rdfs:domain rdf:resource="#Thing__devices__Vision__Camera__parameters"/>
+  <rdfs:range rdf:resource="#Thing__devices__Vision__Camera__parameters__ros"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__Sensor">
+  <rdfs:domain rdf:resource="#Thing__devices"/>
+  <rdfs:range rdf:resource="#Thing__devices__Sensor"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__Sensor__FTSensor">
+  <rdfs:domain rdf:resource="#Thing__devices__Sensor"/>
+  <rdfs:range rdf:resource="#Thing__devices__Sensor__FTSensor"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__Sensor__FTSensor__properties">
+  <rdfs:domain rdf:resource="#Thing__devices__Sensor__FTSensor"/>
+  <rdfs:range rdf:resource="#Thing__devices__Sensor__FTSensor__properties"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__Sensor__FTSensor__parameters">
+  <rdfs:domain rdf:resource="#Thing__devices__Sensor__FTSensor"/>
+  <rdfs:range rdf:resource="#Thing__devices__Sensor__FTSensor__parameters"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__Sensor__FTSensor__parameters__ports">
+  <rdfs:domain rdf:resource="#Thing__devices__Sensor__FTSensor__parameters"/>
+  <rdfs:range rdf:resource="#Thing__devices__Sensor__FTSensor__parameters__ports"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__Sensor__FTSensor__parameters__driver">
+  <rdfs:domain rdf:resource="#Thing__devices__Sensor__FTSensor__parameters"/>
+  <rdfs:range rdf:resource="#Thing__devices__Sensor__FTSensor__parameters__driver"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__Sensor__FTSensor__parameters__driver__parameters">
+  <rdfs:domain rdf:resource="#Thing__devices__Sensor__FTSensor__parameters__driver"/>
+  <rdfs:range rdf:resource="#Thing__devices__Sensor__FTSensor__parameters__driver__parameters"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__Sensor__FTSensor__parameters__driver__parameters__INSTALL_POS">
+  <rdfs:domain rdf:resource="#Thing__devices__Sensor__FTSensor__parameters__driver__parameters"/>
+  <rdfs:range rdf:resource="#Thing__devices__Sensor__FTSensor__parameters__driver__parameters__INSTALL_POS"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__Sensor__FTSensor__parameters__ros">
+  <rdfs:domain rdf:resource="#Thing__devices__Sensor__FTSensor__parameters"/>
+  <rdfs:range rdf:resource="#Thing__devices__Sensor__FTSensor__parameters__ros"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__MES">
+  <rdfs:domain rdf:resource="#Thing__devices"/>
+  <rdfs:range rdf:resource="#Thing__devices__MES"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__MES__ButtonBox">
+  <rdfs:domain rdf:resource="#Thing__devices__MES"/>
+  <rdfs:range rdf:resource="#Thing__devices__MES__ButtonBox"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__MES__ButtonBox__properties">
+  <rdfs:domain rdf:resource="#Thing__devices__MES__ButtonBox"/>
+  <rdfs:range rdf:resource="#Thing__devices__MES__ButtonBox__properties"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__MES__ButtonBox__parameters">
+  <rdfs:domain rdf:resource="#Thing__devices__MES__ButtonBox"/>
+  <rdfs:range rdf:resource="#Thing__devices__MES__ButtonBox__parameters"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__MES__ButtonBox__parameters__ports">
+  <rdfs:domain rdf:resource="#Thing__devices__MES__ButtonBox__parameters"/>
+  <rdfs:range rdf:resource="#Thing__devices__MES__ButtonBox__parameters__ports"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__MES__ButtonBox__parameters__driver">
+  <rdfs:domain rdf:resource="#Thing__devices__MES__ButtonBox__parameters"/>
+  <rdfs:range rdf:resource="#Thing__devices__MES__ButtonBox__parameters__driver"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__MES__ButtonBox__parameters__driver__parameters">
+  <rdfs:domain rdf:resource="#Thing__devices__MES__ButtonBox__parameters__driver"/>
+  <rdfs:range rdf:resource="#Thing__devices__MES__ButtonBox__parameters__driver__parameters"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasThing__devices__MES__ButtonBox__parameters__ros">
+  <rdfs:domain rdf:resource="#Thing__devices__MES__ButtonBox__parameters"/>
+  <rdfs:range rdf:resource="#Thing__devices__MES__ButtonBox__parameters__ros"/>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="#hasversion">
+  <rdfs:domain rdf:resource="#Thing__library_information"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__RobotArm__parameters__driver"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__Vehicle__parameters__driver"/>
+  <rdfs:domain rdf:resource="#Thing__devices__end_effector__Gripper__parameters__driver"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasbuild_date">
+  <rdfs:domain rdf:resource="#Thing__library_information"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#haslicenses">
+  <rdfs:domain rdf:resource="#Thing__library_information"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#haslocale">
+  <rdfs:domain rdf:resource="#Thing__library_configuration"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hastext_encoding">
+  <rdfs:domain rdf:resource="#Thing__library_configuration"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasdevice">
+  <rdfs:domain rdf:resource="#Thing__devices__Controller__ComputingDevice"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__RobotArm"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__Vehicle"/>
+  <rdfs:domain rdf:resource="#Thing__devices__end_effector__Gripper"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Vision__Camera"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Sensor__FTSensor"/>
+  <rdfs:domain rdf:resource="#Thing__devices__MES__ButtonBox"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasmodel">
+  <rdfs:domain rdf:resource="#Thing__devices__Controller__ComputingDevice"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__RobotArm"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__Vehicle"/>
+  <rdfs:domain rdf:resource="#Thing__devices__end_effector__Gripper"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Vision__Camera"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Sensor__FTSensor"/>
+  <rdfs:domain rdf:resource="#Thing__devices__MES__ButtonBox"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasdescription">
+  <rdfs:domain rdf:resource="#Thing__devices__Controller__ComputingDevice"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__RobotArm"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__Vehicle"/>
+  <rdfs:domain rdf:resource="#Thing__devices__end_effector__Gripper"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Vision__Camera"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Sensor__FTSensor"/>
+  <rdfs:domain rdf:resource="#Thing__devices__MES__ButtonBox"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasicon">
+  <rdfs:domain rdf:resource="#Thing__devices__Controller__ComputingDevice"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__RobotArm"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__Vehicle"/>
+  <rdfs:domain rdf:resource="#Thing__devices__end_effector__Gripper"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Vision__Camera"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Sensor__FTSensor"/>
+  <rdfs:domain rdf:resource="#Thing__devices__MES__ButtonBox"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasicon_canvas">
+  <rdfs:domain rdf:resource="#Thing__devices__Controller__ComputingDevice"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__RobotArm"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__Vehicle"/>
+  <rdfs:domain rdf:resource="#Thing__devices__end_effector__Gripper"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Vision__Camera"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Sensor__FTSensor"/>
+  <rdfs:domain rdf:resource="#Thing__devices__MES__ButtonBox"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasicon_Selected">
+  <rdfs:domain rdf:resource="#Thing__devices__Controller__ComputingDevice"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__RobotArm"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__Vehicle"/>
+  <rdfs:domain rdf:resource="#Thing__devices__end_effector__Gripper"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Vision__Camera"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Sensor__FTSensor"/>
+  <rdfs:domain rdf:resource="#Thing__devices__MES__ButtonBox"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hashas_3DModel">
+  <rdfs:domain rdf:resource="#Thing__devices__Controller__ComputingDevice__properties"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__RobotArm__properties"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__Vehicle__properties"/>
+  <rdfs:domain rdf:resource="#Thing__devices__end_effector__Gripper__properties"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Vision__Camera__properties"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Sensor__FTSensor__properties"/>
+  <rdfs:domain rdf:resource="#Thing__devices__MES__ButtonBox__properties"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hashas_forte">
+  <rdfs:domain rdf:resource="#Thing__devices__Controller__ComputingDevice__properties"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__RobotArm__properties"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__Vehicle__properties"/>
+  <rdfs:domain rdf:resource="#Thing__devices__end_effector__Gripper__properties"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Vision__Camera__properties"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Sensor__FTSensor__properties"/>
+  <rdfs:domain rdf:resource="#Thing__devices__MES__ButtonBox__properties"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hashas_functionblocks">
+  <rdfs:domain rdf:resource="#Thing__devices__Controller__ComputingDevice__properties"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__RobotArm__properties"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__Vehicle__properties"/>
+  <rdfs:domain rdf:resource="#Thing__devices__end_effector__Gripper__properties"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Vision__Camera__properties"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Sensor__FTSensor__properties"/>
+  <rdfs:domain rdf:resource="#Thing__devices__MES__ButtonBox__properties"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hastype">
+  <rdfs:domain rdf:resource="#Thing__devices__Controller__ComputingDevice__parameters__ports"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__RobotArm__parameters__ports"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__RobotArm__parameters__ros"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__Vehicle__parameters__ports"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__Vehicle__parameters__ros"/>
+  <rdfs:domain rdf:resource="#Thing__devices__end_effector__Gripper__parameters__ports"/>
+  <rdfs:domain rdf:resource="#Thing__devices__end_effector__Gripper__parameters__ros"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Vision__Camera__parameters__ports"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Sensor__FTSensor__parameters__ports"/>
+  <rdfs:domain rdf:resource="#Thing__devices__MES__ButtonBox__parameters__ports"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasphycial_port">
+  <rdfs:domain rdf:resource="#Thing__devices__Controller__ComputingDevice__parameters__ports"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hashas_wireless">
+  <rdfs:domain rdf:resource="#Thing__devices__Controller__ComputingDevice__parameters__ports"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasstandard">
+  <rdfs:domain rdf:resource="#Thing__devices__Controller__ComputingDevice__parameters__runtime"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasip">
+  <rdfs:domain rdf:resource="#Thing__devices__Controller__ComputingDevice__parameters__runtime__forte"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__RobotArm__parameters__driver__parameters"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__Vehicle__parameters__driver__parameters"/>
+  <rdfs:domain rdf:resource="#Thing__devices__end_effector__Gripper__parameters__driver__parameters"/>
+  <rdfs:domain rdf:resource="#Thing__devices__MES__ButtonBox__parameters__driver__parameters"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasport">
+  <rdfs:domain rdf:resource="#Thing__devices__Controller__ComputingDevice__parameters__runtime__forte"/>
+  <rdfs:domain rdf:resource="#Thing__devices__end_effector__Gripper__parameters__driver__parameters"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasis_robot_arm">
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__RobotArm"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasdriver">
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__RobotArm__parameters__ports"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__Vehicle__parameters__ports"/>
+  <rdfs:domain rdf:resource="#Thing__devices__end_effector__Gripper__parameters__ports"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Vision__Camera__parameters__ports"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Sensor__FTSensor__parameters__ports"/>
+  <rdfs:domain rdf:resource="#Thing__devices__MES__ButtonBox__parameters__ports"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasname">
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__RobotArm__parameters__driver"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__RobotArm__parameters__ros"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__Vehicle__parameters__driver"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__Vehicle__parameters__ros"/>
+  <rdfs:domain rdf:resource="#Thing__devices__end_effector__Gripper__parameters__driver"/>
+  <rdfs:domain rdf:resource="#Thing__devices__end_effector__Gripper__parameters__ros"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Vision__Camera__parameters__driver"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Sensor__FTSensor__parameters__driver"/>
+  <rdfs:domain rdf:resource="#Thing__devices__MES__ButtonBox__parameters__driver"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasentry">
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__RobotArm__parameters__driver"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__Vehicle__parameters__driver"/>
+  <rdfs:domain rdf:resource="#Thing__devices__end_effector__Gripper__parameters__driver"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasoutput">
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__RobotArm__parameters__driver"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__Vehicle__parameters__driver"/>
+  <rdfs:domain rdf:resource="#Thing__devices__end_effector__Gripper__parameters__driver"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#haslocal_ip">
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__RobotArm__parameters__driver__parameters"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#haslocal_port">
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__RobotArm__parameters__driver__parameters"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasimgSrc">
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__RobotArm__parameters__ros"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__Vehicle__parameters__ros"/>
+  <rdfs:domain rdf:resource="#Thing__devices__end_effector__Gripper__parameters__ros"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasprefix">
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__RobotArm__parameters__ros"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__Vehicle__parameters__ros"/>
+  <rdfs:domain rdf:resource="#Thing__devices__end_effector__Gripper__parameters__ros"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasurdfUrl">
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__RobotArm__parameters__ros"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__Vehicle__parameters__ros"/>
+  <rdfs:domain rdf:resource="#Thing__devices__end_effector__Gripper__parameters__ros"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasdriver_type">
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__RobotArm__parameters__ros__rosMessage"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasrobot_arms">
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__RobotArm__parameters__ros__rosMessage"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasarm_ip">
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__RobotArm__parameters__ros__rosMessage"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasmoveit_manipulater">
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__RobotArm__parameters__ros__rosMessage"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasarm_driver">
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__RobotArm__parameters__ros__rosMessage"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasauto_charge">
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__Vehicle__parameters__driver__parameters"/>
+  <rdfs:domain rdf:resource="#Thing__devices__MES__ButtonBox__parameters__driver__parameters"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#haslow_limit_volt">
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__Vehicle__parameters__driver__parameters"/>
+  <rdfs:domain rdf:resource="#Thing__devices__MES__ButtonBox__parameters__driver__parameters"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasupper_limit_volt">
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__Vehicle__parameters__driver__parameters"/>
+  <rdfs:domain rdf:resource="#Thing__devices__MES__ButtonBox__parameters__driver__parameters"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasagv_type">
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__Vehicle__parameters__ros__rosMessage"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasrobot_agv">
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__Vehicle__parameters__ros__rosMessage"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasagv_ip">
+  <rdfs:domain rdf:resource="#Thing__devices__Robot__Vehicle__parameters__ros__rosMessage"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasnode">
+  <rdfs:domain rdf:resource="#Thing__devices__end_effector__Gripper__parameters__driver__parameters"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasgripper_type">
+  <rdfs:domain rdf:resource="#Thing__devices__end_effector__Gripper__parameters__ros__rosMessage"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasrobot_grippers">
+  <rdfs:domain rdf:resource="#Thing__devices__end_effector__Gripper__parameters__ros__rosMessage"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasgripper_connection_type">
+  <rdfs:domain rdf:resource="#Thing__devices__end_effector__Gripper__parameters__ros__rosMessage"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasgripper_ip">
+  <rdfs:domain rdf:resource="#Thing__devices__end_effector__Gripper__parameters__ros__rosMessage"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasgripper_port">
+  <rdfs:domain rdf:resource="#Thing__devices__end_effector__Gripper__parameters__ros__rosMessage"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasgripper_serial">
+  <rdfs:domain rdf:resource="#Thing__devices__end_effector__Gripper__parameters__ros__rosMessage"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasinclude">
+  <rdfs:domain rdf:resource="#Thing__devices__end_effector__Gripper__parameters__ros"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Vision__Camera__parameters__ros"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Sensor__FTSensor__parameters__ros"/>
+  <rdfs:domain rdf:resource="#Thing__devices__MES__ButtonBox__parameters__ros"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasIP_ADDRESS">
+  <rdfs:domain rdf:resource="#Thing__devices__Vision__Camera__parameters__driver__parameters"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Sensor__FTSensor__parameters__driver__parameters"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#hasPORT">
+  <rdfs:domain rdf:resource="#Thing__devices__Vision__Camera__parameters__driver__parameters"/>
+  <rdfs:domain rdf:resource="#Thing__devices__Sensor__FTSensor__parameters__driver__parameters"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="#super">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__library_information">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__library_information__release_information">
+  <rdfs:subClassOf rdf:resource="#Thing__library_information"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__library_configuration">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__Controller">
+  <rdfs:subClassOf rdf:resource="#Thing__devices"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__Controller__ComputingDevice">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__Controller"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__Controller__ComputingDevice__properties">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__Controller__ComputingDevice"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__Controller__ComputingDevice__parameters">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__Controller__ComputingDevice"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__Controller__ComputingDevice__parameters__ports">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__Controller__ComputingDevice__parameters"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__Controller__ComputingDevice__parameters__runtime">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__Controller__ComputingDevice__parameters"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__Controller__ComputingDevice__parameters__runtime__forte">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__Controller__ComputingDevice__parameters__runtime"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__Robot">
+  <rdfs:subClassOf rdf:resource="#Thing__devices"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__Robot__RobotArm">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__Robot"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__Robot__RobotArm__properties">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__Robot__RobotArm"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__Robot__RobotArm__parameters">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__Robot__RobotArm"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__Robot__RobotArm__parameters__ports">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__Robot__RobotArm__parameters"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__Robot__RobotArm__parameters__driver">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__Robot__RobotArm__parameters"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__Robot__RobotArm__parameters__driver__parameters">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__Robot__RobotArm__parameters__driver"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__Robot__RobotArm__parameters__ros">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__Robot__RobotArm__parameters"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__Robot__RobotArm__parameters__ros__rosMessage">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__Robot__RobotArm__parameters__ros"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__Robot__Vehicle">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__Robot"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__Robot__Vehicle__properties">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__Robot__Vehicle"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__Robot__Vehicle__parameters">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__Robot__Vehicle"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__Robot__Vehicle__parameters__ports">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__Robot__Vehicle__parameters"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__Robot__Vehicle__parameters__driver">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__Robot__Vehicle__parameters"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__Robot__Vehicle__parameters__driver__parameters">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__Robot__Vehicle__parameters__driver"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__Robot__Vehicle__parameters__ros">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__Robot__Vehicle__parameters"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__Robot__Vehicle__parameters__ros__rosMessage">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__Robot__Vehicle__parameters__ros"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__end_effector">
+  <rdfs:subClassOf rdf:resource="#Thing__devices"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__end_effector__Gripper">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__end_effector"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__end_effector__Gripper__properties">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__end_effector__Gripper"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__end_effector__Gripper__parameters">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__end_effector__Gripper"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__end_effector__Gripper__parameters__ports">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__end_effector__Gripper__parameters"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__end_effector__Gripper__parameters__driver">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__end_effector__Gripper__parameters"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__end_effector__Gripper__parameters__driver__parameters">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__end_effector__Gripper__parameters__driver"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__end_effector__Gripper__parameters__ros">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__end_effector__Gripper__parameters"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__end_effector__Gripper__parameters__ros__rosMessage">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__end_effector__Gripper__parameters__ros"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__Vision">
+  <rdfs:subClassOf rdf:resource="#Thing__devices"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__Vision__Camera">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__Vision"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__Vision__Camera__properties">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__Vision__Camera"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__Vision__Camera__parameters">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__Vision__Camera"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__Vision__Camera__parameters__ports">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__Vision__Camera__parameters"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__Vision__Camera__parameters__driver">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__Vision__Camera__parameters"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__Vision__Camera__parameters__driver__parameters">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__Vision__Camera__parameters__driver"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__Vision__Camera__parameters__ros">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__Vision__Camera__parameters"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__Sensor">
+  <rdfs:subClassOf rdf:resource="#Thing__devices"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__Sensor__FTSensor">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__Sensor"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__Sensor__FTSensor__properties">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__Sensor__FTSensor"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__Sensor__FTSensor__parameters">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__Sensor__FTSensor"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__Sensor__FTSensor__parameters__ports">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__Sensor__FTSensor__parameters"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__Sensor__FTSensor__parameters__driver">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__Sensor__FTSensor__parameters"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__Sensor__FTSensor__parameters__driver__parameters">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__Sensor__FTSensor__parameters__driver"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__Sensor__FTSensor__parameters__driver__parameters__INSTALL_POS">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__Sensor__FTSensor__parameters__driver__parameters"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__Sensor__FTSensor__parameters__ros">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__Sensor__FTSensor__parameters"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__MES">
+  <rdfs:subClassOf rdf:resource="#Thing__devices"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__MES__ButtonBox">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__MES"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__MES__ButtonBox__properties">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__MES__ButtonBox"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__MES__ButtonBox__parameters">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__MES__ButtonBox"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__MES__ButtonBox__parameters__ports">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__MES__ButtonBox__parameters"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__MES__ButtonBox__parameters__driver">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__MES__ButtonBox__parameters"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__MES__ButtonBox__parameters__driver__parameters">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__MES__ButtonBox__parameters__driver"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Thing__devices__MES__ButtonBox__parameters__ros">
+  <rdfs:subClassOf rdf:resource="#Thing__devices__MES__ButtonBox__parameters"/>
+</owl:Class>
+
+<super rdf:about="#individual_id0">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__library_information rdf:resource="#individual_id1"/>
+  <hasThing__library_configuration rdf:resource="#individual_id2"/>
+  <hasThing__devices rdf:resource="#individual_id3"/>
+  <hasThing__devices rdf:resource="#individual_id12"/>
+  <hasThing__devices rdf:resource="#individual_id39"/>
+  <hasThing__devices rdf:resource="#individual_id63"/>
+  <hasThing__devices rdf:resource="#individual_id79"/>
+  <hasThing__devices rdf:resource="#individual_id88"/>
+</super>
+
+<Thing__library_information rdf:about="#individual_id1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasversion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v1.0</hasversion>
+  <hasbuild_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2019-7-16 4:46pm</hasbuild_date>
+  <haslicenses rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></haslicenses>
+</Thing__library_information>
+
+<Thing__library_configuration rdf:about="#individual_id2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <haslocale rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></haslocale>
+  <hastext_encoding rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></hastext_encoding>
+</Thing__library_configuration>
+
+<Thing__devices rdf:about="#individual_id3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__Controller rdf:resource="#individual_id4"/>
+</Thing__devices>
+
+<Thing__devices__Controller rdf:about="#individual_id4">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__Controller__ComputingDevice rdf:resource="#individual_id5"/>
+</Thing__devices__Controller>
+
+<Thing__devices__Controller__ComputingDevice rdf:about="#individual_id5">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__Controller__ComputingDevice__properties rdf:resource="#individual_id6"/>
+  <hasThing__devices__Controller__ComputingDevice__parameters rdf:resource="#individual_id7"/>
+  <hasdevice rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IPC NUC</hasdevice>
+  <hasmodel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel NUC</hasmodel>
+  <hasdescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intel NUC Embedded PC</hasdescription>
+  <hasicon rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ipc.png</hasicon>
+  <hasicon_canvas rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ipc_canvas.png</hasicon_canvas>
+  <hasicon_Selected rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ipc_canvas_act.png</hasicon_Selected>
+</Thing__devices__Controller__ComputingDevice>
+
+<Thing__devices__Controller__ComputingDevice__properties rdf:about="#individual_id6">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hashas_3DModel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</hashas_3DModel>
+  <hashas_forte rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</hashas_forte>
+  <hashas_functionblocks rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</hashas_functionblocks>
+</Thing__devices__Controller__ComputingDevice__properties>
+
+<Thing__devices__Controller__ComputingDevice__parameters rdf:about="#individual_id7">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__Controller__ComputingDevice__parameters__ports rdf:resource="#individual_id8"/>
+  <hasThing__devices__Controller__ComputingDevice__parameters__ports rdf:resource="#individual_id9"/>
+  <hasThing__devices__Controller__ComputingDevice__parameters__runtime rdf:resource="#individual_id10"/>
+</Thing__devices__Controller__ComputingDevice__parameters>
+
+<Thing__devices__Controller__ComputingDevice__parameters__ports rdf:about="#individual_id8">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hastype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ethernet</hastype>
+  <hasphycial_port rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</hasphycial_port>
+  <hashas_wireless rdf:datatype="http://www.w3.org/2001/XMLSchema#string">True</hashas_wireless>
+</Thing__devices__Controller__ComputingDevice__parameters__ports>
+
+<Thing__devices__Controller__ComputingDevice__parameters__ports rdf:about="#individual_id9">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hastype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USB0</hastype>
+</Thing__devices__Controller__ComputingDevice__parameters__ports>
+
+<Thing__devices__Controller__ComputingDevice__parameters__runtime rdf:about="#individual_id10">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__Controller__ComputingDevice__parameters__runtime__forte rdf:resource="#individual_id11"/>
+  <hasstandard rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IEC-61499</hasstandard>
+</Thing__devices__Controller__ComputingDevice__parameters__runtime>
+
+<Thing__devices__Controller__ComputingDevice__parameters__runtime__forte rdf:about="#individual_id11">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasip rdf:datatype="http://www.w3.org/2001/XMLSchema#string">localhost</hasip>
+  <hasport rdf:datatype="http://www.w3.org/2001/XMLSchema#string">61499</hasport>
+</Thing__devices__Controller__ComputingDevice__parameters__runtime__forte>
+
+<Thing__devices rdf:about="#individual_id12">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__Robot rdf:resource="#individual_id13"/>
+  <hasThing__devices__Robot rdf:resource="#individual_id30"/>
+</Thing__devices>
+
+<Thing__devices__Robot rdf:about="#individual_id13">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__Robot__RobotArm rdf:resource="#individual_id14"/>
+  <hasThing__devices__Robot__RobotArm rdf:resource="#individual_id22"/>
+</Thing__devices__Robot>
+
+<Thing__devices__Robot__RobotArm rdf:about="#individual_id14">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__Robot__RobotArm__properties rdf:resource="#individual_id15"/>
+  <hasThing__devices__Robot__RobotArm__parameters rdf:resource="#individual_id16"/>
+  <hasdevice rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UR5</hasdevice>
+  <hasmodel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robot</hasmodel>
+  <hasdescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Universal Robot UR5</hasdescription>
+  <hasicon rdf:datatype="http://www.w3.org/2001/XMLSchema#string">robot.png</hasicon>
+  <hasicon_canvas rdf:datatype="http://www.w3.org/2001/XMLSchema#string">robot_canvas.png</hasicon_canvas>
+  <hasicon_Selected rdf:datatype="http://www.w3.org/2001/XMLSchema#string">robot_canvas_act.png</hasicon_Selected>
+  <hasis_robot_arm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">True</hasis_robot_arm>
+</Thing__devices__Robot__RobotArm>
+
+<Thing__devices__Robot__RobotArm__properties rdf:about="#individual_id15">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hashas_3DModel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</hashas_3DModel>
+  <hashas_forte rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</hashas_forte>
+  <hashas_functionblocks rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</hashas_functionblocks>
+</Thing__devices__Robot__RobotArm__properties>
+
+<Thing__devices__Robot__RobotArm__parameters rdf:about="#individual_id16">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__Robot__RobotArm__parameters__ports rdf:resource="#individual_id17"/>
+  <hasThing__devices__Robot__RobotArm__parameters__driver rdf:resource="#individual_id18"/>
+  <hasThing__devices__Robot__RobotArm__parameters__ros rdf:resource="#individual_id20"/>
+</Thing__devices__Robot__RobotArm__parameters>
+
+<Thing__devices__Robot__RobotArm__parameters__ports rdf:about="#individual_id17">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hastype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ethernet</hastype>
+  <hasdriver rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SIEMENS_ROBOT_UR_INSTANCE</hasdriver>
+</Thing__devices__Robot__RobotArm__parameters__ports>
+
+<Thing__devices__Robot__RobotArm__parameters__driver rdf:about="#individual_id18">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__Robot__RobotArm__parameters__driver__parameters rdf:resource="#individual_id19"/>
+  <hasversion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0</hasversion>
+  <hasname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SIEMENS_ROBOT_UR_INSTANCE</hasname>
+  <hasentry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INIT</hasentry>
+  <hasoutput rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INIT_OK</hasoutput>
+</Thing__devices__Robot__RobotArm__parameters__driver>
+
+<Thing__devices__Robot__RobotArm__parameters__driver__parameters rdf:about="#individual_id19">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasip rdf:datatype="http://www.w3.org/2001/XMLSchema#string">192.168.1.2</hasip>
+  <haslocal_ip rdf:datatype="http://www.w3.org/2001/XMLSchema#string">127.0.0.1</haslocal_ip>
+  <haslocal_port rdf:datatype="http://www.w3.org/2001/XMLSchema#string">50001</haslocal_port>
+</Thing__devices__Robot__RobotArm__parameters__driver__parameters>
+
+<Thing__devices__Robot__RobotArm__parameters__ros rdf:about="#individual_id20">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__Robot__RobotArm__parameters__ros__rosMessage rdf:resource="#individual_id21"/>
+  <hastype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robot</hastype>
+  <hasname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ur5</hasname>
+  <hasimgSrc rdf:datatype="http://www.w3.org/2001/XMLSchema#string">../../../../assets/ros/robot.png</hasimgSrc>
+  <hasprefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">robot</hasprefix>
+  <hasurdfUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">/robot/ros/Kuntin/ur5_description/urdf/ur5.urdf.xacro</hasurdfUrl>
+</Thing__devices__Robot__RobotArm__parameters__ros>
+
+<Thing__devices__Robot__RobotArm__parameters__ros__rosMessage rdf:about="#individual_id21">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasdriver_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ur_modern_driver</hasdriver_type>
+  <hasrobot_arms rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ur5_1</hasrobot_arms>
+  <hasarm_ip rdf:datatype="http://www.w3.org/2001/XMLSchema#string">127.0.0.1</hasarm_ip>
+  <hasmoveit_manipulater rdf:datatype="http://www.w3.org/2001/XMLSchema#string">arm</hasmoveit_manipulater>
+  <hasarm_driver rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ur_hardware_interface</hasarm_driver>
+</Thing__devices__Robot__RobotArm__parameters__ros__rosMessage>
+
+<Thing__devices__Robot__RobotArm rdf:about="#individual_id22">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__Robot__RobotArm__properties rdf:resource="#individual_id23"/>
+  <hasThing__devices__Robot__RobotArm__parameters rdf:resource="#individual_id24"/>
+  <hasdevice rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UR5e</hasdevice>
+  <hasmodel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robot</hasmodel>
+  <hasdescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Universal Robot UR5e</hasdescription>
+  <hasicon rdf:datatype="http://www.w3.org/2001/XMLSchema#string">robot.png</hasicon>
+  <hasicon_canvas rdf:datatype="http://www.w3.org/2001/XMLSchema#string">robot_canvas.png</hasicon_canvas>
+  <hasicon_Selected rdf:datatype="http://www.w3.org/2001/XMLSchema#string">robot_canvas_act.png</hasicon_Selected>
+  <hasis_robot_arm rdf:datatype="http://www.w3.org/2001/XMLSchema#string">True</hasis_robot_arm>
+</Thing__devices__Robot__RobotArm>
+
+<Thing__devices__Robot__RobotArm__properties rdf:about="#individual_id23">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hashas_3DModel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</hashas_3DModel>
+  <hashas_forte rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</hashas_forte>
+  <hashas_functionblocks rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</hashas_functionblocks>
+</Thing__devices__Robot__RobotArm__properties>
+
+<Thing__devices__Robot__RobotArm__parameters rdf:about="#individual_id24">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__Robot__RobotArm__parameters__ports rdf:resource="#individual_id25"/>
+  <hasThing__devices__Robot__RobotArm__parameters__driver rdf:resource="#individual_id26"/>
+  <hasThing__devices__Robot__RobotArm__parameters__ros rdf:resource="#individual_id28"/>
+</Thing__devices__Robot__RobotArm__parameters>
+
+<Thing__devices__Robot__RobotArm__parameters__ports rdf:about="#individual_id25">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hastype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ethernet</hastype>
+  <hasdriver rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SIEMENS_ROBOT_UR_INSTANCE</hasdriver>
+</Thing__devices__Robot__RobotArm__parameters__ports>
+
+<Thing__devices__Robot__RobotArm__parameters__driver rdf:about="#individual_id26">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__Robot__RobotArm__parameters__driver__parameters rdf:resource="#individual_id27"/>
+  <hasversion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0</hasversion>
+  <hasname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SIEMENS_ROBOT_UR_INSTANCE</hasname>
+  <hasentry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INIT</hasentry>
+  <hasoutput rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INIT_OK</hasoutput>
+</Thing__devices__Robot__RobotArm__parameters__driver>
+
+<Thing__devices__Robot__RobotArm__parameters__driver__parameters rdf:about="#individual_id27">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasip rdf:datatype="http://www.w3.org/2001/XMLSchema#string">192.168.1.2</hasip>
+  <haslocal_ip rdf:datatype="http://www.w3.org/2001/XMLSchema#string">127.0.0.1</haslocal_ip>
+  <haslocal_port rdf:datatype="http://www.w3.org/2001/XMLSchema#string">50001</haslocal_port>
+</Thing__devices__Robot__RobotArm__parameters__driver__parameters>
+
+<Thing__devices__Robot__RobotArm__parameters__ros rdf:about="#individual_id28">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__Robot__RobotArm__parameters__ros__rosMessage rdf:resource="#individual_id29"/>
+  <hastype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robot</hastype>
+  <hasname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ur5e</hasname>
+  <hasimgSrc rdf:datatype="http://www.w3.org/2001/XMLSchema#string">../../../../assets/ros/robot.png</hasimgSrc>
+  <hasprefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">robot</hasprefix>
+  <hasurdfUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">/robot/ros/Kuntin/ur5e_description/urdf/ur5e.urdf.xacro</hasurdfUrl>
+</Thing__devices__Robot__RobotArm__parameters__ros>
+
+<Thing__devices__Robot__RobotArm__parameters__ros__rosMessage rdf:about="#individual_id29">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasdriver_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ur_rtde_driver</hasdriver_type>
+  <hasrobot_arms rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ur5e_1</hasrobot_arms>
+  <hasarm_ip rdf:datatype="http://www.w3.org/2001/XMLSchema#string">127.0.0.1</hasarm_ip>
+  <hasmoveit_manipulater rdf:datatype="http://www.w3.org/2001/XMLSchema#string">arm</hasmoveit_manipulater>
+  <hasarm_driver rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ur_hardware_interface</hasarm_driver>
+</Thing__devices__Robot__RobotArm__parameters__ros__rosMessage>
+
+<Thing__devices__Robot rdf:about="#individual_id30">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__Robot__Vehicle rdf:resource="#individual_id31"/>
+</Thing__devices__Robot>
+
+<Thing__devices__Robot__Vehicle rdf:about="#individual_id31">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__Robot__Vehicle__properties rdf:resource="#individual_id32"/>
+  <hasThing__devices__Robot__Vehicle__parameters rdf:resource="#individual_id33"/>
+  <hasdevice rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seer AGV</hasdevice>
+  <hasmodel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AGV</hasmodel>
+  <hasdescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Automated Guided Vehicle</hasdescription>
+  <hasicon rdf:datatype="http://www.w3.org/2001/XMLSchema#string">agv_library.png</hasicon>
+  <hasicon_canvas rdf:datatype="http://www.w3.org/2001/XMLSchema#string">agv_canvas.png</hasicon_canvas>
+  <hasicon_Selected rdf:datatype="http://www.w3.org/2001/XMLSchema#string">agv_cavans_act.png</hasicon_Selected>
+</Thing__devices__Robot__Vehicle>
+
+<Thing__devices__Robot__Vehicle__properties rdf:about="#individual_id32">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hashas_3DModel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</hashas_3DModel>
+  <hashas_forte rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</hashas_forte>
+  <hashas_functionblocks rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</hashas_functionblocks>
+</Thing__devices__Robot__Vehicle__properties>
+
+<Thing__devices__Robot__Vehicle__parameters rdf:about="#individual_id33">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__Robot__Vehicle__parameters__ports rdf:resource="#individual_id34"/>
+  <hasThing__devices__Robot__Vehicle__parameters__driver rdf:resource="#individual_id35"/>
+  <hasThing__devices__Robot__Vehicle__parameters__ros rdf:resource="#individual_id37"/>
+</Thing__devices__Robot__Vehicle__parameters>
+
+<Thing__devices__Robot__Vehicle__parameters__ports rdf:about="#individual_id34">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hastype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ethernet</hastype>
+  <hasdriver rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SIEMENS_AGV_SEER_INSTANCE</hasdriver>
+</Thing__devices__Robot__Vehicle__parameters__ports>
+
+<Thing__devices__Robot__Vehicle__parameters__driver rdf:about="#individual_id35">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__Robot__Vehicle__parameters__driver__parameters rdf:resource="#individual_id36"/>
+  <hasversion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0</hasversion>
+  <hasname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SIEMENS_AGV_SEER_INSTANCE</hasname>
+  <hasentry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INIT</hasentry>
+  <hasoutput rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INIT_OK</hasoutput>
+</Thing__devices__Robot__Vehicle__parameters__driver>
+
+<Thing__devices__Robot__Vehicle__parameters__driver__parameters rdf:about="#individual_id36">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasip rdf:datatype="http://www.w3.org/2001/XMLSchema#string">192.168.1.2</hasip>
+  <hasauto_charge rdf:datatype="http://www.w3.org/2001/XMLSchema#string">True</hasauto_charge>
+  <haslow_limit_volt rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.3</haslow_limit_volt>
+  <hasupper_limit_volt rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.8</hasupper_limit_volt>
+</Thing__devices__Robot__Vehicle__parameters__driver__parameters>
+
+<Thing__devices__Robot__Vehicle__parameters__ros rdf:about="#individual_id37">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__Robot__Vehicle__parameters__ros__rosMessage rdf:resource="#individual_id38"/>
+  <hastype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robot</hastype>
+  <hasname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sewc_agv</hasname>
+  <hasimgSrc rdf:datatype="http://www.w3.org/2001/XMLSchema#string">../../../../assets/ros/agv.svg</hasimgSrc>
+  <hasprefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">agv</hasprefix>
+  <hasurdfUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">/robot/ros/Kuntin/sewc_agv_description/urdf/sewc_agv.xacro</hasurdfUrl>
+</Thing__devices__Robot__Vehicle__parameters__ros>
+
+<Thing__devices__Robot__Vehicle__parameters__ros__rosMessage rdf:about="#individual_id38">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasagv_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">seer</hasagv_type>
+  <hasrobot_agv rdf:datatype="http://www.w3.org/2001/XMLSchema#string">agv</hasrobot_agv>
+  <hasagv_ip rdf:datatype="http://www.w3.org/2001/XMLSchema#string">127.0.0.1</hasagv_ip>
+</Thing__devices__Robot__Vehicle__parameters__ros__rosMessage>
+
+<Thing__devices rdf:about="#individual_id39">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__end_effector rdf:resource="#individual_id40"/>
+</Thing__devices>
+
+<Thing__devices__end_effector rdf:about="#individual_id40">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__end_effector__Gripper rdf:resource="#individual_id41"/>
+  <hasThing__devices__end_effector__Gripper rdf:resource="#individual_id49"/>
+  <hasThing__devices__end_effector__Gripper rdf:resource="#individual_id56"/>
+</Thing__devices__end_effector>
+
+<Thing__devices__end_effector__Gripper rdf:about="#individual_id41">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__end_effector__Gripper__properties rdf:resource="#individual_id42"/>
+  <hasThing__devices__end_effector__Gripper__parameters rdf:resource="#individual_id43"/>
+  <hasdevice rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robotiq-85</hasdevice>
+  <hasmodel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gripper</hasmodel>
+  <hasdescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robotiq 2-Finger gripper 85mm</hasdescription>
+  <hasicon rdf:datatype="http://www.w3.org/2001/XMLSchema#string">robotiq.png</hasicon>
+  <hasicon_canvas rdf:datatype="http://www.w3.org/2001/XMLSchema#string">robotiq_canvas.png</hasicon_canvas>
+  <hasicon_Selected rdf:datatype="http://www.w3.org/2001/XMLSchema#string">robotiq_canvas_act.png</hasicon_Selected>
+</Thing__devices__end_effector__Gripper>
+
+<Thing__devices__end_effector__Gripper__properties rdf:about="#individual_id42">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hashas_3DModel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</hashas_3DModel>
+  <hashas_forte rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</hashas_forte>
+  <hashas_functionblocks rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</hashas_functionblocks>
+</Thing__devices__end_effector__Gripper__properties>
+
+<Thing__devices__end_effector__Gripper__parameters rdf:about="#individual_id43">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__end_effector__Gripper__parameters__ports rdf:resource="#individual_id44"/>
+  <hasThing__devices__end_effector__Gripper__parameters__driver rdf:resource="#individual_id45"/>
+  <hasThing__devices__end_effector__Gripper__parameters__ros rdf:resource="#individual_id47"/>
+</Thing__devices__end_effector__Gripper__parameters>
+
+<Thing__devices__end_effector__Gripper__parameters__ports rdf:about="#individual_id44">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hastype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USB</hastype>
+  <hasdriver rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SIEMENS_GRIPPER_ROBOTIQ_INSTANCE</hasdriver>
+</Thing__devices__end_effector__Gripper__parameters__ports>
+
+<Thing__devices__end_effector__Gripper__parameters__driver rdf:about="#individual_id45">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__end_effector__Gripper__parameters__driver__parameters rdf:resource="#individual_id46"/>
+  <hasversion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0</hasversion>
+  <hasname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SIEMENS_GRIPPER_ROBOTIQ_INSTANCE</hasname>
+  <hasentry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INIT</hasentry>
+  <hasoutput rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INIT_OK</hasoutput>
+</Thing__devices__end_effector__Gripper__parameters__driver>
+
+<Thing__devices__end_effector__Gripper__parameters__driver__parameters rdf:about="#individual_id46">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasnode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">/dev/ttyUSB0</hasnode>
+</Thing__devices__end_effector__Gripper__parameters__driver__parameters>
+
+<Thing__devices__end_effector__Gripper__parameters__ros rdf:about="#individual_id47">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__end_effector__Gripper__parameters__ros__rosMessage rdf:resource="#individual_id48"/>
+  <hastype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robot</hastype>
+  <hasname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">robotiq_85_gripper</hasname>
+  <hasimgSrc rdf:datatype="http://www.w3.org/2001/XMLSchema#string">../../../../assets/ros/griper.svg</hasimgSrc>
+  <hasprefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gripper</hasprefix>
+  <hasurdfUrl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">/robot/ros/Kuntin/robotiq_85_gripper_description/urdf/robotiq_85_gripper.urdf.xacro</hasurdfUrl>
+</Thing__devices__end_effector__Gripper__parameters__ros>
+
+<Thing__devices__end_effector__Gripper__parameters__ros__rosMessage rdf:about="#individual_id48">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasgripper_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">robotiq</hasgripper_type>
+  <hasrobot_grippers rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gripper1</hasrobot_grippers>
+  <hasgripper_connection_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</hasgripper_connection_type>
+  <hasgripper_ip rdf:datatype="http://www.w3.org/2001/XMLSchema#string">127.0.0.1</hasgripper_ip>
+  <hasgripper_port rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NA</hasgripper_port>
+  <hasgripper_serial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">/dev/ttyUSB0</hasgripper_serial>
+</Thing__devices__end_effector__Gripper__parameters__ros__rosMessage>
+
+<Thing__devices__end_effector__Gripper rdf:about="#individual_id49">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__end_effector__Gripper__properties rdf:resource="#individual_id50"/>
+  <hasThing__devices__end_effector__Gripper__parameters rdf:resource="#individual_id51"/>
+  <hasdevice rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LEH</hasdevice>
+  <hasmodel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gripper</hasmodel>
+  <hasdescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></hasdescription>
+  <hasicon rdf:datatype="http://www.w3.org/2001/XMLSchema#string">leh.png</hasicon>
+  <hasicon_canvas rdf:datatype="http://www.w3.org/2001/XMLSchema#string">leh_canvas.png</hasicon_canvas>
+  <hasicon_Selected rdf:datatype="http://www.w3.org/2001/XMLSchema#string">leh_canvas_act.png</hasicon_Selected>
+</Thing__devices__end_effector__Gripper>
+
+<Thing__devices__end_effector__Gripper__properties rdf:about="#individual_id50">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hashas_3DModel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</hashas_3DModel>
+  <hashas_forte rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</hashas_forte>
+  <hashas_functionblocks rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</hashas_functionblocks>
+</Thing__devices__end_effector__Gripper__properties>
+
+<Thing__devices__end_effector__Gripper__parameters rdf:about="#individual_id51">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__end_effector__Gripper__parameters__ports rdf:resource="#individual_id52"/>
+  <hasThing__devices__end_effector__Gripper__parameters__driver rdf:resource="#individual_id53"/>
+  <hasThing__devices__end_effector__Gripper__parameters__ros rdf:resource="#individual_id55"/>
+</Thing__devices__end_effector__Gripper__parameters>
+
+<Thing__devices__end_effector__Gripper__parameters__ports rdf:about="#individual_id52">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hastype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USB</hastype>
+  <hasdriver rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SIEMENS_GRIPPER_LEH_INSTANCE</hasdriver>
+</Thing__devices__end_effector__Gripper__parameters__ports>
+
+<Thing__devices__end_effector__Gripper__parameters__driver rdf:about="#individual_id53">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__end_effector__Gripper__parameters__driver__parameters rdf:resource="#individual_id54"/>
+  <hasversion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0</hasversion>
+  <hasname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SIEMENS_GRIPPER_LEH_INSTANCE</hasname>
+  <hasentry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INIT</hasentry>
+  <hasoutput rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INIT_OK</hasoutput>
+</Thing__devices__end_effector__Gripper__parameters__driver>
+
+<Thing__devices__end_effector__Gripper__parameters__driver__parameters rdf:about="#individual_id54">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasnode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">/dev/ttyUSB0</hasnode>
+</Thing__devices__end_effector__Gripper__parameters__driver__parameters>
+
+<Thing__devices__end_effector__Gripper__parameters__ros rdf:about="#individual_id55">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasinclude rdf:datatype="http://www.w3.org/2001/XMLSchema#string">path.json</hasinclude>
+</Thing__devices__end_effector__Gripper__parameters__ros>
+
+<Thing__devices__end_effector__Gripper rdf:about="#individual_id56">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__end_effector__Gripper__properties rdf:resource="#individual_id57"/>
+  <hasThing__devices__end_effector__Gripper__parameters rdf:resource="#individual_id58"/>
+  <hasdevice rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schunk 32-068</hasdevice>
+  <hasmodel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gripper</hasmodel>
+  <hasdescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></hasdescription>
+  <hasicon rdf:datatype="http://www.w3.org/2001/XMLSchema#string">schunk.png</hasicon>
+  <hasicon_canvas rdf:datatype="http://www.w3.org/2001/XMLSchema#string">schunk_canvas.png</hasicon_canvas>
+  <hasicon_Selected rdf:datatype="http://www.w3.org/2001/XMLSchema#string">schunk_canvas_act.png</hasicon_Selected>
+</Thing__devices__end_effector__Gripper>
+
+<Thing__devices__end_effector__Gripper__properties rdf:about="#individual_id57">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hashas_3DModel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</hashas_3DModel>
+  <hashas_forte rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</hashas_forte>
+  <hashas_functionblocks rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</hashas_functionblocks>
+</Thing__devices__end_effector__Gripper__properties>
+
+<Thing__devices__end_effector__Gripper__parameters rdf:about="#individual_id58">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__end_effector__Gripper__parameters__ports rdf:resource="#individual_id59"/>
+  <hasThing__devices__end_effector__Gripper__parameters__driver rdf:resource="#individual_id60"/>
+  <hasThing__devices__end_effector__Gripper__parameters__ros rdf:resource="#individual_id62"/>
+</Thing__devices__end_effector__Gripper__parameters>
+
+<Thing__devices__end_effector__Gripper__parameters__ports rdf:about="#individual_id59">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hastype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ethernet</hastype>
+  <hasdriver rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SIEMENS_GRIPPER_SCHUNK_INSTANCE</hasdriver>
+</Thing__devices__end_effector__Gripper__parameters__ports>
+
+<Thing__devices__end_effector__Gripper__parameters__driver rdf:about="#individual_id60">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__end_effector__Gripper__parameters__driver__parameters rdf:resource="#individual_id61"/>
+  <hasname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SIEMENS_GRIPPER_SCHUNK_INSTANCE</hasname>
+  <hasentry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INIT</hasentry>
+  <hasoutput rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INIT_OK</hasoutput>
+</Thing__devices__end_effector__Gripper__parameters__driver>
+
+<Thing__devices__end_effector__Gripper__parameters__driver__parameters rdf:about="#individual_id61">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasip rdf:datatype="http://www.w3.org/2001/XMLSchema#string">127.0.0.1</hasip>
+  <hasport rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8800</hasport>
+</Thing__devices__end_effector__Gripper__parameters__driver__parameters>
+
+<Thing__devices__end_effector__Gripper__parameters__ros rdf:about="#individual_id62">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasinclude rdf:datatype="http://www.w3.org/2001/XMLSchema#string">path.json</hasinclude>
+</Thing__devices__end_effector__Gripper__parameters__ros>
+
+<Thing__devices rdf:about="#individual_id63">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__Vision rdf:resource="#individual_id64"/>
+</Thing__devices>
+
+<Thing__devices__Vision rdf:about="#individual_id64">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__Vision__Camera rdf:resource="#individual_id65"/>
+  <hasThing__devices__Vision__Camera rdf:resource="#individual_id72"/>
+</Thing__devices__Vision>
+
+<Thing__devices__Vision__Camera rdf:about="#individual_id65">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__Vision__Camera__properties rdf:resource="#individual_id66"/>
+  <hasThing__devices__Vision__Camera__parameters rdf:resource="#individual_id67"/>
+  <hasdevice rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Keyence Smart Camera</hasdevice>
+  <hasmodel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Camera</hasmodel>
+  <hasdescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string">keyence CCD vision camera</hasdescription>
+  <hasicon rdf:datatype="http://www.w3.org/2001/XMLSchema#string">camera_keyence.png</hasicon>
+  <hasicon_canvas rdf:datatype="http://www.w3.org/2001/XMLSchema#string">camera_keyence_canvas.png</hasicon_canvas>
+  <hasicon_Selected rdf:datatype="http://www.w3.org/2001/XMLSchema#string">camera_keyence_cat.png</hasicon_Selected>
+</Thing__devices__Vision__Camera>
+
+<Thing__devices__Vision__Camera__properties rdf:about="#individual_id66">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hashas_3DModel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</hashas_3DModel>
+  <hashas_forte rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</hashas_forte>
+  <hashas_functionblocks rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</hashas_functionblocks>
+</Thing__devices__Vision__Camera__properties>
+
+<Thing__devices__Vision__Camera__parameters rdf:about="#individual_id67">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__Vision__Camera__parameters__ports rdf:resource="#individual_id68"/>
+  <hasThing__devices__Vision__Camera__parameters__driver rdf:resource="#individual_id69"/>
+  <hasThing__devices__Vision__Camera__parameters__ros rdf:resource="#individual_id71"/>
+</Thing__devices__Vision__Camera__parameters>
+
+<Thing__devices__Vision__Camera__parameters__ports rdf:about="#individual_id68">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hastype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ethernet</hastype>
+  <hasdriver rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SIEMENS_CAMERA_MANAGER_KEYENCE</hasdriver>
+</Thing__devices__Vision__Camera__parameters__ports>
+
+<Thing__devices__Vision__Camera__parameters__driver rdf:about="#individual_id69">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__Vision__Camera__parameters__driver__parameters rdf:resource="#individual_id70"/>
+  <hasname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SIEMENS_CAMERA_MANAGER_KEYENCE</hasname>
+</Thing__devices__Vision__Camera__parameters__driver>
+
+<Thing__devices__Vision__Camera__parameters__driver__parameters rdf:about="#individual_id70">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasIP_ADDRESS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">127.0.0.1</hasIP_ADDRESS>
+  <hasPORT rdf:datatype="http://www.w3.org/2001/XMLSchema#string">45667</hasPORT>
+</Thing__devices__Vision__Camera__parameters__driver__parameters>
+
+<Thing__devices__Vision__Camera__parameters__ros rdf:about="#individual_id71">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasinclude rdf:datatype="http://www.w3.org/2001/XMLSchema#string">path.json</hasinclude>
+</Thing__devices__Vision__Camera__parameters__ros>
+
+<Thing__devices__Vision__Camera rdf:about="#individual_id72">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__Vision__Camera__properties rdf:resource="#individual_id73"/>
+  <hasThing__devices__Vision__Camera__parameters rdf:resource="#individual_id74"/>
+  <hasdevice rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vision Wizard Camera</hasdevice>
+  <hasmodel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Camera</hasmodel>
+  <hasdescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></hasdescription>
+  <hasicon rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vision_l.png</hasicon>
+  <hasicon_canvas rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vision_c.png</hasicon_canvas>
+  <hasicon_Selected rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vision_c_act.png</hasicon_Selected>
+</Thing__devices__Vision__Camera>
+
+<Thing__devices__Vision__Camera__properties rdf:about="#individual_id73">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hashas_3DModel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</hashas_3DModel>
+  <hashas_forte rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</hashas_forte>
+  <hashas_functionblocks rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</hashas_functionblocks>
+</Thing__devices__Vision__Camera__properties>
+
+<Thing__devices__Vision__Camera__parameters rdf:about="#individual_id74">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__Vision__Camera__parameters__ports rdf:resource="#individual_id75"/>
+  <hasThing__devices__Vision__Camera__parameters__driver rdf:resource="#individual_id76"/>
+  <hasThing__devices__Vision__Camera__parameters__ros rdf:resource="#individual_id78"/>
+</Thing__devices__Vision__Camera__parameters>
+
+<Thing__devices__Vision__Camera__parameters__ports rdf:about="#individual_id75">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hastype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USB0</hastype>
+  <hasdriver rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SIEMENS_CAMERA_MANAGER_USB</hasdriver>
+</Thing__devices__Vision__Camera__parameters__ports>
+
+<Thing__devices__Vision__Camera__parameters__driver rdf:about="#individual_id76">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__Vision__Camera__parameters__driver__parameters rdf:resource="#individual_id77"/>
+  <hasname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SIEMENS_CAMERA_MANAGER_USB</hasname>
+</Thing__devices__Vision__Camera__parameters__driver>
+
+<Thing__devices__Vision__Camera__parameters__driver__parameters rdf:about="#individual_id77">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasIP_ADDRESS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">127.0.0.1</hasIP_ADDRESS>
+  <hasPORT rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8999</hasPORT>
+</Thing__devices__Vision__Camera__parameters__driver__parameters>
+
+<Thing__devices__Vision__Camera__parameters__ros rdf:about="#individual_id78">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasinclude rdf:datatype="http://www.w3.org/2001/XMLSchema#string">path.json</hasinclude>
+</Thing__devices__Vision__Camera__parameters__ros>
+
+<Thing__devices rdf:about="#individual_id79">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__Sensor rdf:resource="#individual_id80"/>
+</Thing__devices>
+
+<Thing__devices__Sensor rdf:about="#individual_id80">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__Sensor__FTSensor rdf:resource="#individual_id81"/>
+</Thing__devices__Sensor>
+
+<Thing__devices__Sensor__FTSensor rdf:about="#individual_id81">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__Sensor__FTSensor__properties rdf:resource="#individual_id82"/>
+  <hasThing__devices__Sensor__FTSensor__parameters rdf:resource="#individual_id83"/>
+  <hasdevice rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ATI FT27535</hasdevice>
+  <hasmodel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">force_torque</hasmodel>
+  <hasdescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></hasdescription>
+  <hasicon rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ende.png</hasicon>
+  <hasicon_canvas rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ende_canvas.png</hasicon_canvas>
+  <hasicon_Selected rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ende_canvas_act.png</hasicon_Selected>
+</Thing__devices__Sensor__FTSensor>
+
+<Thing__devices__Sensor__FTSensor__properties rdf:about="#individual_id82">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hashas_3DModel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</hashas_3DModel>
+  <hashas_forte rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</hashas_forte>
+  <hashas_functionblocks rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</hashas_functionblocks>
+</Thing__devices__Sensor__FTSensor__properties>
+
+<Thing__devices__Sensor__FTSensor__parameters rdf:about="#individual_id83">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__Sensor__FTSensor__parameters__ports rdf:resource="#individual_id84"/>
+  <hasThing__devices__Sensor__FTSensor__parameters__driver rdf:resource="#individual_id85"/>
+  <hasThing__devices__Sensor__FTSensor__parameters__ros rdf:resource="#individual_id87"/>
+</Thing__devices__Sensor__FTSensor__parameters>
+
+<Thing__devices__Sensor__FTSensor__parameters__ports rdf:about="#individual_id84">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hastype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ethernet</hastype>
+  <hasdriver rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SIEMENS_FT_MANAGER_ATI</hasdriver>
+</Thing__devices__Sensor__FTSensor__parameters__ports>
+
+<Thing__devices__Sensor__FTSensor__parameters__driver rdf:about="#individual_id85">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__Sensor__FTSensor__parameters__driver__parameters rdf:resource="#individual_id86"/>
+  <hasname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SIEMENS_FT_MANAGER_ATI</hasname>
+</Thing__devices__Sensor__FTSensor__parameters__driver>
+
+<Thing__devices__Sensor__FTSensor__parameters__driver__parameters rdf:about="#individual_id86">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasIP_ADDRESS rdf:datatype="http://www.w3.org/2001/XMLSchema#string">192.168.1.10</hasIP_ADDRESS>
+  <hasPORT rdf:datatype="http://www.w3.org/2001/XMLSchema#string">49151</hasPORT>
+</Thing__devices__Sensor__FTSensor__parameters__driver__parameters>
+
+<Thing__devices__Sensor__FTSensor__parameters__ros rdf:about="#individual_id87">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasinclude rdf:datatype="http://www.w3.org/2001/XMLSchema#string">path.json</hasinclude>
+</Thing__devices__Sensor__FTSensor__parameters__ros>
+
+<Thing__devices rdf:about="#individual_id88">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__MES rdf:resource="#individual_id89"/>
+</Thing__devices>
+
+<Thing__devices__MES rdf:about="#individual_id89">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__MES__ButtonBox rdf:resource="#individual_id90"/>
+</Thing__devices__MES>
+
+<Thing__devices__MES__ButtonBox rdf:about="#individual_id90">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__MES__ButtonBox__properties rdf:resource="#individual_id91"/>
+  <hasThing__devices__MES__ButtonBox__parameters rdf:resource="#individual_id92"/>
+  <hasdevice rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Button Panel</hasdevice>
+  <hasmodel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Button Panel</hasmodel>
+  <hasdescription rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></hasdescription>
+  <hasicon rdf:datatype="http://www.w3.org/2001/XMLSchema#string">button_library.png</hasicon>
+  <hasicon_canvas rdf:datatype="http://www.w3.org/2001/XMLSchema#string">button_canvas.png</hasicon_canvas>
+  <hasicon_Selected rdf:datatype="http://www.w3.org/2001/XMLSchema#string">button_canvas_act.png</hasicon_Selected>
+</Thing__devices__MES__ButtonBox>
+
+<Thing__devices__MES__ButtonBox__properties rdf:about="#individual_id91">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hashas_3DModel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</hashas_3DModel>
+  <hashas_forte rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</hashas_forte>
+  <hashas_functionblocks rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</hashas_functionblocks>
+</Thing__devices__MES__ButtonBox__properties>
+
+<Thing__devices__MES__ButtonBox__parameters rdf:about="#individual_id92">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__MES__ButtonBox__parameters__ports rdf:resource="#individual_id93"/>
+  <hasThing__devices__MES__ButtonBox__parameters__driver rdf:resource="#individual_id94"/>
+  <hasThing__devices__MES__ButtonBox__parameters__ros rdf:resource="#individual_id96"/>
+</Thing__devices__MES__ButtonBox__parameters>
+
+<Thing__devices__MES__ButtonBox__parameters__ports rdf:about="#individual_id93">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hastype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ethernet</hastype>
+  <hasdriver rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SIEMENS_AGV_SEER_INSTANCE</hasdriver>
+</Thing__devices__MES__ButtonBox__parameters__ports>
+
+<Thing__devices__MES__ButtonBox__parameters__driver rdf:about="#individual_id94">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasThing__devices__MES__ButtonBox__parameters__driver__parameters rdf:resource="#individual_id95"/>
+  <hasname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SIEMENS_AGV_SEER_INSTANCE</hasname>
+</Thing__devices__MES__ButtonBox__parameters__driver>
+
+<Thing__devices__MES__ButtonBox__parameters__driver__parameters rdf:about="#individual_id95">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <hasip rdf:datatype="http://www.w3.org/2001/XMLSchema#string">192.168.1.2</hasip>
+  <hasauto_charge rdf:datatype="http://www.w3.org/2001/XMLSchema#string">True</hasauto_charge>
+  <haslow_limit_volt rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.3</haslow_limit_volt>
+  <hasupper_limit_volt rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.8</hasupper_limit_volt>
+</Thing__devices__MES__ButtonBox__parameters__driver__parameters>
+
+<Thing__devices__MES__ButtonBox__parameters__ros rdf:about="#individual_id96">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Thing__devices__MES__ButtonBox__parameters__ros>
+
+
+</rdf:RDF>
