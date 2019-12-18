@@ -99,7 +99,7 @@ if __name__ == "__main__":
                     # G.add_edge(tmp, tmp3, =str(subindividual))
                     count += 1
 
-                G.add_edge(tmp, tmp3, property=str(subindividual.split("__")[-1]))
+                G.add_edge(tmp, tmp3, property=str(subindividual))
             if type(subindividual_dict[subindividual]) == list:
                 for x in subindividual_dict[subindividual]:
                     if x in dict:
