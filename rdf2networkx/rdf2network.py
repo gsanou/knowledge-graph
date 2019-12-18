@@ -3,6 +3,9 @@ import matplotlib.pyplot as plt
 import rdflib
 import pylab
 
+output_file_labels=open("wiki_labels.txt","w")
+output_file_edgelists=open("wiki_edgelists.txt","w")
+
 
 def query_individual_content(a,individual_name,rdf_about):
     """
@@ -67,6 +70,7 @@ if __name__ == "__main__":
             tmp = dict[str(i)]
         else:
             G.add_node(count, name=str(i))
+            output_file_labels.writelines(str(count) + " " + "0" + "\n")
             dict[i] = count
             tmp = count
             count += 1
@@ -82,10 +86,13 @@ if __name__ == "__main__":
             else:
                 tmp2 = count
                 G.add_node(count, name=dataproperty_dict[dataproperty])
+                output_file_labels.writelines(str(count) + " " + "1" + "\n")
                 dict[dataproperty_dict[dataproperty]] = count
                 count += 1
             # G[tmp][tmp2]["dataproperty"] = dataproperty
             G.add_edge(tmp, tmp2, dataproperty=str(dataproperty))
+            output_file_edgelists.writelines(str(tmp) + " " + str(tmp2) + "\n")
+
         for subindividual in subindividual_dict:
             if type(subindividual_dict[subindividual]) == str:
                 # G.add_node(subindividual_dict[subindividual], key="individual")
@@ -95,11 +102,14 @@ if __name__ == "__main__":
                 else:
                     tmp3 = count
                     G.add_node(tmp3,name = subindividual_dict[subindividual])
+                    output_file_labels.writelines(str(count) + " " + "0" + "\n")
                     dict[subindividual_dict[subindividual]] = count
                     # G.add_edge(tmp, tmp3, =str(subindividual))
                     count += 1
 
-                G.add_edge(tmp, tmp3, property=str(subindividual))
+                G.add_edge(tmp, tmp3, property=str(subindividual.split("__")[-1]))
+                output_file_edgelists.writelines(str(tmp) + " " + str(tmp3) + "\n")
+
             if type(subindividual_dict[subindividual]) == list:
                 for x in subindividual_dict[subindividual]:
                     if x in dict:
@@ -108,12 +118,16 @@ if __name__ == "__main__":
                         tmp4 = count
                         # G.add_node(str(x), key="individual")
                         G.add_node(count, name=str(x))
+                        output_file_labels.writelines(str(count) + " " + "0" + "\n")
                         dict[str(x)] = count
                         count += 1
                     # G.add_edge(str(i), str(x), capacity=str(subindividual))
                     G.add_edge(tmp, tmp4, property=str(x))
+                    output_file_edgelists.writelines(str(tmp) + " " + str(tmp4) + "\n")
 
     # query_individual_content(a,"individual_id0",rdf_about)
+    output_file_labels.close()
+    output_file_edgelists.close()
 
     nx.draw_networkx(G)
     plt.show()
