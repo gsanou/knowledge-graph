@@ -63,9 +63,13 @@ if __name__ == "__main__":
     count = 0
     for i in individual_list:
         # G.add_node(str(i), key="individual")
-        G.add_node(count, name=str(i))
-        tmp = count
-        count += 1
+        if str(i) in dict:
+            tmp = dict[str(i)]
+        else:
+            G.add_node(count, name=str(i))
+            dict[i] = count
+            tmp = count
+            count += 1
         dataproperty_dict = query_individual_content(a,str(i),rdf_about)[0]
         subindividual_dict = query_individual_content(a,str(i),rdf_about)[1]
         print("sssssssssss")
@@ -73,33 +77,39 @@ if __name__ == "__main__":
         for dataproperty in dataproperty_dict:
             # G.add_node(dataproperty_dict[dataproperty], key="value")
             # G.add_edge(str(i),dataproperty_dict[dataproperty] , capacity=str(dataproperty))
-            tmp2 = count
-            G.add_node(count, name=dataproperty_dict[dataproperty])
-            count += 1
+            if dataproperty_dict[dataproperty] in dict:
+                tmp2 = dict[dataproperty_dict[dataproperty]]
+            else:
+                tmp2 = count
+                G.add_node(count, name=dataproperty_dict[dataproperty])
+                dict[dataproperty_dict[dataproperty]] = count
+                count += 1
             # G[tmp][tmp2]["dataproperty"] = dataproperty
             G.add_edge(tmp, tmp2, dataproperty=str(dataproperty))
         for subindividual in subindividual_dict:
             if type(subindividual_dict[subindividual]) == str:
                 # G.add_node(subindividual_dict[subindividual], key="individual")
                 # G.add_edge(str(i),subindividual_dict[subindividual] , capacity=str(subindividual))
-                tmp3 = count
-                G.add_node(tmp3,name = subindividual_dict[subindividual])
-                # G.add_edge(tmp, tmp3, =str(subindividual))
-                count += 1
-                print("xxxxxxxxxxxxxx")
-                print(tmp)
-                print(tmp3)
-                print(str(subindividual).split("__")[-1])
-                print(subindividual_dict[subindividual])
+                if subindividual_dict[subindividual] in dict:
+                    tmp3 = dict[subindividual_dict[subindividual]]
+                else:
+                    tmp3 = count
+                    G.add_node(tmp3,name = subindividual_dict[subindividual])
+                    dict[subindividual_dict[subindividual]] = count
+                    # G.add_edge(tmp, tmp3, =str(subindividual))
+                    count += 1
+
                 G.add_edge(tmp, tmp3, property=str(subindividual.split("__")[-1]))
             if type(subindividual_dict[subindividual]) == list:
                 for x in subindividual_dict[subindividual]:
-                    print(x)
-                    print("zzzzz")
-                    tmp4 = count
-                    # G.add_node(str(x), key="individual")
-                    G.add_node(count, name=str(x))
-                    count += 1
+                    if x in dict:
+                        tmp4 = dict[str(x)]
+                    else:
+                        tmp4 = count
+                        # G.add_node(str(x), key="individual")
+                        G.add_node(count, name=str(x))
+                        dict[str(x)] = count
+                        count += 1
                     # G.add_edge(str(i), str(x), capacity=str(subindividual))
                     G.add_edge(tmp, tmp4, property=str(x))
 
