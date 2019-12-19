@@ -22,11 +22,15 @@ def query_individual_content(a,individual_name,rdf_about):
     t = list(x)
     result = {}
     sub_individuals = {}
+    current_class = {}
     for i in t:
         # print("========")
         # print(i)
         dataproperty = i[0].split("#")[-1]
         dataproperty_value = i[1].split("#")[-1]
+        print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+        print(dataproperty)
+        print(dataproperty_value)
         if dataproperty_value != "NamedIndividual" and dataproperty != "type":
             if dataproperty_value in individual_list:
                 if dataproperty in sub_individuals :
@@ -34,17 +38,20 @@ def query_individual_content(a,individual_name,rdf_about):
                         copy = sub_individuals[dataproperty]
                         tmp = [copy,dataproperty_value]
                         sub_individuals[dataproperty] = tmp
-                    if type(sub_individuals[dataproperty]) == list:
+                    if type(sub_individuals[dataproperty]) == list and dataproperty_value not in sub_individuals[dataproperty]:
                         sub_individuals[dataproperty].append(dataproperty_value)
                 else:
                     sub_individuals[dataproperty] = dataproperty_value
             else:
                 a = str(i[1])
                 result[dataproperty] = a
+        if dataproperty_value != "NamedIndividual" and dataproperty == "type":
+            current_class["classtype"] = dataproperty_value
     print("--------------------")
     print(result)
     print(sub_individuals)
-    return result,sub_individuals
+    print(current_class)
+    return result,sub_individuals,current_class
 
 
 if __name__ == "__main__":
@@ -62,6 +69,7 @@ if __name__ == "__main__":
     # create_json("individual_id0",dict)
     # individual_list = ["individual_id10","individual_id11"]
 
+    # query_individual_content(a,"individual_id16", rdf_about)
 
     count = 0
     for i in individual_list:
@@ -76,8 +84,9 @@ if __name__ == "__main__":
             count += 1
         dataproperty_dict = query_individual_content(a,str(i),rdf_about)[0]
         subindividual_dict = query_individual_content(a,str(i),rdf_about)[1]
+        current_class_type = query_individual_content(a,str(i),rdf_about)[2]
         print("sssssssssss")
-        print(subindividual_dict)
+        print(dataproperty_dict)
         for dataproperty in dataproperty_dict:
             # G.add_node(dataproperty_dict[dataproperty], key="value")
             # G.add_edge(str(i),dataproperty_dict[dataproperty] , capacity=str(dataproperty))
@@ -124,8 +133,15 @@ if __name__ == "__main__":
                     # G.add_edge(str(i), str(x), capacity=str(subindividual))
                     G.add_edge(tmp, tmp4, property=str(x))
                     output_file_edgelists.writelines(str(tmp) + " " + str(tmp4) + "\n")
-
+        for class_type in current_class_type:
+            tmp5 = count
+            G.add_node(tmp5, classname=current_class_type[class_type])
+            output_file_labels.writelines(str(count) + " " + "3" + "\n")
+            count += 1
+            G.add_edge(tmp, tmp5, property="class")
+            output_file_edgelists.writelines(str(tmp) + " " + str(tmp5) + "\n")
     # query_individual_content(a,"individual_id0",rdf_about)
+
     output_file_labels.close()
     output_file_edgelists.close()
 
