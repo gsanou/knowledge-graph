@@ -136,7 +136,7 @@ if __name__ == "__main__":
         for class_type in current_class_type:
             tmp5 = count
             G.add_node(tmp5, classname=current_class_type[class_type])
-            output_file_labels.writelines(str(count) + " " + "3" + "\n")
+            output_file_labels.writelines(str(count) + " " + "2" + "\n")
             count += 1
             G.add_edge(tmp, tmp5, property="class")
             output_file_edgelists.writelines(str(tmp) + " " + str(tmp5) + "\n")
