@@ -1,0 +1,25 @@
+1. 从官网下载mongodb
+2. 把下载的解压缩，放到/usr/local下，
+3. 打开 .bash_profile       open ～/.bash_profile
+4. 添加 export PATH=${PATH}:/usr/local/mongodb/bin
+5. source ～/.bash_profile
+6. 输入 mongod -version 检测是否安装成功
+7. 在根目录下新建 data 文件夹，里面再建一个 db 文件夹，安装MongoDB时并不会自动生成，需要我们手动创建
+8. sudo mkdir -p /data/db
+9. 在命令行输入 mongod 启动服务端
+
+
+显示等候客户端连接的界面就代表启动成功了
+
+10. 如果出错可能是文件权限不够
+11. 打开浏览器，输入localhost:27017 ，会出现这样一行文字
+	“It looks like you are trying to access MongoDB over HTTP on the native driver port.”
+
+12. 打开一个新的terminal
+13. 输入mongo 可以对数据库进行操作，要停止MongoDB的时候一定要正确的退出，不然下次再次连接数据库会出现问题，使用下面的两行代码可以完成这一操作
+
+14. use admin;
+
+15. db.shutdownServer();
+
+16. 可视化工具 Robomongo
