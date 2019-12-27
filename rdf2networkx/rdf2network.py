@@ -4,7 +4,7 @@ import rdflib
 import pylab
 
 output_file_labels=open("wiki_labels.txt","w")
-output_file_edgelists=open("wiki_edgelists.txt","w")
+output_file_edgelists=open("wiki_edgelist.txt","w")
 output_numbers_contents=open("numbers_contents.txt","w")
 
 def query_individual_content(a,individual_name,rdf_about):
@@ -173,11 +173,6 @@ if __name__ == "__main__":
                     G.add_edge(tmp, tmp4, property=str(x))
                     output_file_edgelists.writelines(str(tmp) + " " + str(tmp4) + "\n")
         for class_type in current_class_type:
-            print("xxxxxxxxxxxxxxxxxxxxxxxxxxxx")
-            print(class_type)
-            print(current_class_type)
-            print(current_class_type[class_type])
-            print(total_class_dict)
             if "has"+current_class_type[class_type] not in total_class_dict:
                 tmp5 = count
                 G.add_node(tmp5, classname="hassuper")
@@ -194,7 +189,7 @@ if __name__ == "__main__":
                     output_file_labels.writelines(str(count) + " " + "2" + "\n")
                     output_numbers_contents.writelines(str(count) + " " + "2" + " " + current_class_type[class_type] + "\n")
                     count += 1
-            print(total_class_dict)
+            # print(total_class_dict)
             G.add_edge(tmp5, tmp, property="class")
             output_file_edgelists.writelines(str(tmp) + " " + str(tmp5) + "\n")
     # query_individual_content(a,"individual_id0",rdf_about)
