@@ -77,7 +77,10 @@ def add_dataproperty1(dataproperty_name,domain,range):
 # plan3 推荐第三个
 def add_dataproperty(dataproperty_name,domain_value,range_value):
     with onto:
-        exec('class {0}(DataProperty): \n domain=[onto.{1}]  \n range=[{2}]'.format(dataproperty_name,domain_value,range_value))
+        if domain_value == "Thing":
+            exec('class {0}(DataProperty): \n domain=[{1}]  \n range=[{2}]'.format(dataproperty_name,domain_value,range_value))
+        else:
+            exec('class {0}(DataProperty): \n domain=[onto.{1}]  \n range=[{2}]'.format(dataproperty_name,domain_value,range_value))
     # onto.has_for_synonym = ["acetaminophen", "paracétamol"]
     onto.save("hello2222.rdf")
 # add_dataproperty("hasversion","super","str")
@@ -112,7 +115,7 @@ def add_data_value(individual_name,dataproperty_name,value):
 def add_objectproperty(domain_name,objectproprety,range_name):
     with onto:
         exec('class {0}(ObjectProperty): \n domain=[onto.{1}] \n range = [onto.{2}]'.format(objectproprety,domain_name,range_name))
-        onto.save("hello2222.rdf")
+    onto.save("hello2222.rdf")
         # class has_for_ingredient111111(ObjectProperty):
         #     domain = [onto.xxx]
         #     range = [onto.Ingredient]
@@ -120,4 +123,28 @@ def add_objectproperty(domain_name,objectproprety,range_name):
 
 # onto.save("hello2222.rdf")
 # onto.aaa.has_for_synonym = [123]
+# onto.save("hello2222.rdf")
+
+
+def add_individual_individual_objectproperty(individual1,objectproperty,individual2):
+    with onto:
+        exec('onto.{0}.{1}.append(onto.{2})'.format(individual1,objectproperty,individual2))
+    onto.save("hello2222.rdf")
+# add_individual_individual_objectproperty("individual_id0","hasThing__devices","individual_id1")
+# with onto:
+#     class drug(Thing):
+#         pass
+#     class druggg(Thing):
+#         pass
+#     class hasss(ObjectProperty):
+#         pass
+        # domain = [onto.drug]
+        # range = [onto.druggg]
+
+# my_drug = onto.drug("aaa")
+# acetaminophen = onto.druggg("bbb")
+
+# my_drug.hasss = [acetaminophen]
+
+# onto.aaa.hasss.append(onto.bbb)
 # onto.save("hello2222.rdf")
