@@ -4,7 +4,7 @@ import uuid
 # # iri= "http://www.semanticweb.org/yuhaomao/ontologies/2019/9/untitled-ontology-17"
 # onto = get_ontology(path).load()
 
-path = "/Users/yuhaomao/Desktop/MAD_JSON2RDF/hello2222.rdf"
+path = "/Users/yuhaomao/Desktop/knowledge-graph/json2rdf/hello2222.rdf"
 # iri= "http://www.semanticweb.org/yuhaomao/ontologies/2019/9/untitled-ontology-17"
 onto = get_ontology(path).load()
 
@@ -41,7 +41,7 @@ def add_class(name, parent):
             # print("else:")
             # print(parent)
             exec('class {}(onto.{}): pass'.format(name, parent))
-        onto.save("hello2222.rdf")
+    onto.save("hello2222.rdf")
 # add_class("super", Thing)
 
 
