@@ -3,19 +3,43 @@ import copy
 index_list = []
 flag = False
 
+dtype = {}
+
+def chgf(dict, inp, rep):
+    for i in dict.keys():
+        if i == inp:
+            # rep.insert(0, dict[inp])
+            rep = [rep, dict[i]]
+            dict[i] = rep
+            return
+    for i in dict:
+        if type(dict.get(i)) == type(dtype):
+            chgf(dict.get(i), inp, rep)
+
+def chgf_list1(dict, inp, rep):
+    for i in dict.keys():
+        if i == inp:
+            tmp = dict[i]
+            tmp.append(rep)
+            dict[i] = tmp
+            return
+    for i in dict:
+        if type(dict.get(i)) == type(dtype):
+            chgf(dict.get(i), inp, rep)
+
 
 def iteration(a,target):
     global index_list
     global flag
     for i in a:
-        if i == str(target) and type(a) == dict:
+        if i == str(target) and type(a).__name__ == "dict":
             # print("i")
             # print(index_result)
             flag = True
             index_list.append(i)
             break
 
-        if i == str(target) and type(a) == list:
+        if i == str(target) and type(a).__name__ == "list":
             flag = True
             count = 0
             for x in a:
@@ -26,20 +50,21 @@ def iteration(a,target):
             count = 0
             break
 
-        if type(i) == dict:
+        if type(i).__name__ == "dict":
             iteration(i,target)
-        if type(a) == dict:
-            if type(a[i]) == dict or type(a[i]) == list:
+        if type(a).__name__ == "dict":
+            if type(a[i]).__name__ == "dict" or type(a[i]).__name__ == "list":
                 iteration(a[i],target)
-            elif type(a[i]) == str and a[i] == str(target):
+            elif type(a[i]).__name__ == "str" and a[i] == str(target):
                 flag = True
                 index_list.append(i)
                 break
         if flag == True:
-            if type(i) == str and type(a) != list:
+            if type(i).__name__ == "str" and type(a).__name__ != "list":
                 index_list.append(i)
                 break
-            if type(a) == list and type(i) == dict:
+            # if isinstance(a, list) == True and isinstance(i, dict) == True:
+            if type(a).__name__ == "list" and type(i).__name__ == "dict":
                 count = 0
                 for x in a:
                     if x == i:
@@ -54,13 +79,14 @@ def iteration(a,target):
 def replace(main_dictionary,dictionary_name,replace_item):
     global index_list
     global flag
-    # exec('{0} = {1}'.format(dictionary_name,main_dictionary))
-    a = main_dictionary
+    print("mainmainmain")
+    print(main_dictionary)
+    # a = main_dictionary
     b = copy.deepcopy(main_dictionary)
     for i in replace_item:
         target = i
         value = replace_item[i]
-
+        
     iteration(main_dictionary, target)
     index_result_key = copy.deepcopy(index_list)
     # print("?????")
@@ -84,13 +110,15 @@ def replace(main_dictionary,dictionary_name,replace_item):
         # print("zzzzzzzzzzzzzzzzzzzz")
         # print(index_result_key)
         index_result_key.reverse()
+        # print("zzzzzzzzzzzzzzzzzzzz")
+        # print(index_result_key)
         for i in range(len(index_result_key)):
             # print("//////")
             # print(b)
-            if type(index_result_key[i]) == str:
+            if type(index_result_key[i]).__name__ == "str":
                 tmp = tmp + "[\"" + index_result_key[i] + "\"]"
 
-            if type(index_result_key[i]) == int:
+            if type(index_result_key[i]).__name__ == "int":
                 tmp = tmp + "[" + str(index_result_key[i]) + "]"
             # tmp = tmp + "[\"" + index_result_key[::-1][i] + "\"]"
 
@@ -100,11 +128,34 @@ def replace(main_dictionary,dictionary_name,replace_item):
             # print(main_dictionary)
         # print("sdsdad")
         # print(tmp)
-        # print(b)
+        print(b)
 
-        if type(b) == str:
+        if type(b).__name__ == "str":
             if index_result_key[-1] == target:
-                exec('{0} = [{0},"{1}"]'.format(tmp, replace_item[target]))
+                print("ttttttt")
+                print(tmp)
+                print(b)
+                print(replace_item[target])
+
+                chgf(main_dictionary, target, value)
+
+                # exec('{0} = [{0},"{1}"]'.format(tmp, replace_item[target]))
+                # tmp = [tmp,replace_item[target]]
+                print("n1111111111111111111111111")
+                print(main_dictionary)
+                # exec('{0} = [{0},"{1}"]'.format(tmp, replace_item[target]))
+            else:
+                print("else")
+                xxx = {target:replace_item[target]}
+                # print("xxxx")
+                # print(xxx)
+                # print(tmp)
+                exec('{0} = {1}'.format(tmp, xxx))
+
+        if type(b).__name__ == "list":
+            if index_result_key[-1] == target:
+                # exec('{0}.append("{1}")'.format(tmp, replace_item[target]))
+                chgf_list1(main_dictionary,target,value)
             else:
                 xxx = {target:replace_item[target]}
                 # print("xxxx")
@@ -112,17 +163,7 @@ def replace(main_dictionary,dictionary_name,replace_item):
                 # print(tmp)
                 exec('{0} = {1}'.format(tmp, xxx))
 
-        if type(b) == list:
-            if index_result_key[-1] == target:
-                exec('{0}.append("{1}")'.format(tmp, replace_item[target]))
-            else:
-                xxx = {target:replace_item[target]}
-                # print("xxxx")
-                # print(xxx)
-                # print(tmp)
-                exec('{0} = {1}'.format(tmp, xxx))
-
-        if type(b) == dict:
+        if type(b).__name__ == "dict":
             if index_result_key[-1] == target:
                 exec('{0} = [{0},"{1}"]'.format(tmp, replace_item[target]))
             else:
@@ -153,10 +194,10 @@ def replace(main_dictionary,dictionary_name,replace_item):
         for i in range(len(index_result_key)):
             # print("index_result_key[i]index_result_key[i]index_result_key[i]")
             # print(index_result_key[i])
-            if type(index_result_key[i]) == str:
+            if type(index_result_key[i]).__name__ == "str":
                 # print("str str str")
                 tmp = tmp + "[\"" + index_result_key[i] + "\"]"
-            if type(index_result_key[i]) == int:
+            if type(index_result_key[i]).__name__ == "int":
                 # print("int int int ")
                 tmp = tmp + "[" + str(index_result_key[i]) + "]"
             # print("bbbbbbbb")
@@ -167,11 +208,13 @@ def replace(main_dictionary,dictionary_name,replace_item):
             # print("jdasjdsadn")
             # print(b)
             # print(tmp_value)
-            if type(b) == str:
+            if type(b).__name__ == "str":
+                # chgf(main_dictionary,target,value)
                 exec('{0} = ["{2}",{1}]'.format(tmp, tmp_value,b))
-            if type(b) == list:
+            if type(b).__name__ == "list":
+                # chgf_list1(main_dictionary,target,value)
                 exec('{0}.append({1})'.format(tmp, tmp_value))
-            if type(b) == dict:
+            if type(b).__name__ == "dict":
                 exec('{0} = [{2},{1}]'.format(tmp, tmp_value,b))
 
         else:
@@ -197,16 +240,25 @@ def replace(main_dictionary,dictionary_name,replace_item):
     flag = False
     index_list = []
 
-if __name__ == '__main__':
-    a = {"1": {"2": {"3": {"4": {"5": {"6": {"7": {"8": {"9": {"10": "11"}}}}}}}}}, "13": {"18": "12"}}
-    # print(a)
-    list = [{"11":"13"},{"11":"14"},{"19":"20"},{"30":"1"}]
-    # # list = [{"30":"1"}]
-    for i in list:
-        replace_item = i
-        replace(a,"a",replace_item)
-        print(a)
-
+# if __name__ == '__main__':
+#     a = {"1": {"2": {"3": {"4": {"5": {"6": {"7": {"8": {"9": {"10": "11"}}}}}}}}}, "13": {"18": "12"}}
+#     a = {'19': '20','30': {'1': {'2': {'3': {'4': {'5': {'6': {'7': {'8': {'9': {'10': {'11': [{'13': {'18': '12'}}, '14']}}}}}}}}}}}}
+#     a = {'11': [{'13': {'18': '12'}}, '14']}
+#
+#     # print(a)
+#     # list = [{"11":"13"},{"11":"14"},{"19":"20"},{"30":"1"},{"18":"22"}]
+#     # iteration(a, "11")
+#     # print(index_list)
+#     # iteration(a, "13")
+#     # print(index_list)
+#     list = [{"12": "220"}]
+#     for i in list:
+#         replace_item = i
+#         print(replace_item)
+#         replace(a,"a",replace_item)
+#         print(a)
+#         # iteration(a,"18")
+#         # print(index_list)
 
 # a = {'1': ['2', {'3': {'4': [{'11': ['14', {'10': '12'}]}, {'5': ['13', {'15': {'7': {'8': '24'}}}]}]}}], '31': '32', '33': '34'}
 # # #

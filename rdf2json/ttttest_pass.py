@@ -29,6 +29,7 @@ import datetime
 import time
 import re
 import argparse
+import copy
 
 
 class DateEncoder(json.JSONEncoder):
@@ -382,13 +383,75 @@ class OwlDemo:
         return strJson
 
 
-if __name__ == '__main__':
-    parser = argparse.ArgumentParser()
-    parser.add_argument('-i', help='/Users/yuhaomao/Desktop/MAD_JSON2RDF/hello2222.rdf')
-    parser.add_argument('-o', help='/Users/yuhaomao/Desktop/xxxxxx.json')
-    args = parser.parse_args()
-    obj = OwlDemo('/Users/yuhaomao/Desktop/MAD_JSON2RDF/hello2222.rdf', "/Users/yuhaomao/Desktop/ssss.json")
-    start = time.clock()
-    obj.owl_convert()
-    end = time.clock()
-    print('running time: ', end-start)
+# if __name__ == '__main__':
+    # parser = argparse.ArgumentParser()
+    # parser.add_argument('-i', help='/Users/yuhaomao/Desktop/MAD_JSON2RDF/hello2222.rdf')
+    # parser.add_argument('-o', help='/Users/yuhaomao/Desktop/xxxxxx.json')
+    # args = parser.parse_args()
+    # obj = OwlDemo('/Users/yuhaomao/Desktop/MAD_JSON2RDF/hello2222.rdf', "/Users/yuhaomao/Desktop/ssss.json")
+    # start = time.clock()
+    # obj.owl_convert()
+    # end = time.clock()
+    # print('running time: ', end-start)
+    
+    
+    # replace = {6:9}
+    # a = {"1": [{2: {3: {4: {5: {6: 7}}}}},8]}
+    # index = ["1", 0, 2, 3, 4, 5, 6]
+    # print(a["1"][0][2][3][4][5][6])
+    # # for i in index:
+    # #     b = b[i]
+    # #     x = a[i]
+    # #     print(b)
+    # a["1"][0][2][3][4][5][6] = [a["1"][0][2][3][4][5][6],9]
+    # print(a)
+
+    # list1 = {'A':"0", 'B':"1", 'C':"2", 'D':"3"}
+    # i = 'list1["A"]'
+    # exec("{0} = [{0},[111]]".format(i))
+    # print(list1)
+    # a = {'application_1': 'implemented_function_block_4'}
+    # replace = "implemented_function_block_5"
+    # b = copy.copy(a)
+    # index = "application_1"
+    # tmp = 'a["application_1"]'
+    #
+    # exec("{0}=[{0},'{1}']".format(tmp, replace))
+    # print(a)
+
+    # dict = {"1": {"2": {"3": {"4": "5"}}}}
+    # dtype = {}
+    #
+    #
+    # def chgf(dict, inp, rep):
+    #     for i in dict.keys():
+    #         if i == inp:
+    #             # rep.insert(0, dict[inp])
+    #             rep = [rep,dict[i]]
+    #             dict[i] = rep
+    #             return
+    #     for i in dict:
+    #         if type(dict.get(i)) == type(dtype):
+    #             chgf(dict.get(i), inp, rep)
+    #
+    #
+    # chgf(dict, "4", "k")
+    # # chgf(dict,"2",["k","j"])
+    # # chgf(dict,"1",["k","j"])
+    # print(dict)
+    
+a = [1,2,3,4,5,6,7,8,9,0]
+
+def checkpoint(a,i):
+    try:
+        a.remove(i+1)
+    except:
+        pass
+    
+for i in a:
+    print("xxxxxx")
+    print(i)
+    checkpoint(a,i)
+    print(a)
+print("sssssssss")
+print(a)
